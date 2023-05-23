@@ -9,6 +9,7 @@ function theme_files() {
   wp_enqueue_style('kickstart_footerMobile_styles', get_theme_file_uri('/css/footerMobile.css'));
   wp_enqueue_style('kickstart_hero_styles', get_theme_file_uri('/css/hero.css'));
   wp_enqueue_style('kickstart_visionAndMission_styles', get_theme_file_uri('/css/visionAndMission.css'));
+  wp_enqueue_style('kickstart_stackedCards_styles', get_theme_file_uri('/css/stackedCards.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 
