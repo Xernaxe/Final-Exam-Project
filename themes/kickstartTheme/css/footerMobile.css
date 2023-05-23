@@ -2,3 +2,49 @@
   height: 757px;
   background: linear-gradient(0deg, #FFB277 30%,#001438 100%);
 }
+
+.footerWrapper{
+  margin: 40px;
+}
+
+.socialsWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footerLogo{
+  width: 50%;
+  display: block;
+  margin: 75px auto 45px;
+}
+
+.footerMobileLI > a{
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #001438;
+  font-size: 24px;
+}
+
+.footerMobileUL{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerInfo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.infoH{
+  color: #001438;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.infoP{
+  color: #001438;
+}
