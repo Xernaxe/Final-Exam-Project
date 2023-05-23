@@ -1,5 +1,5 @@
 <?php get_header();
-
+  get_template_part('components/hero');
   
 
   while(have_posts()) {
