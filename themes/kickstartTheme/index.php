@@ -1,5 +1,9 @@
 <?php get_header();
+?>
+  <main>
+  <?php
   get_template_part('components/hero');
+  get_template_part('components/visionAndMission');
   
 
   while(have_posts()) {
@@ -8,7 +12,9 @@
     <?php the_content(); ?>
     <hr>
   <?php }
-
+?>
+  </main>
+<?php
   get_footer();
 
 ?>

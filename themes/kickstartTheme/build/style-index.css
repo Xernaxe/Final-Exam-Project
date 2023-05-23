@@ -11,6 +11,9 @@ body {
 	background-color: #001438;
 }
 
+.hero{
+	margin-bottom: 80px;
+}
 
 .hide{
   display: none;
