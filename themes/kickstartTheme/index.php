@@ -5,6 +5,7 @@
   get_template_part('components/hero');
   get_template_part('components/visionAndMission');
   get_template_part('components/stackedCards');
+  get_template_part('components/homePodcast');
   
 
   while(have_posts()) {
