@@ -11,6 +11,7 @@ function theme_files() {
   wp_enqueue_style('kickstart_visionAndMission_styles', get_theme_file_uri('/css/visionAndMission.css'));
   wp_enqueue_style('kickstart_stackedCards_styles', get_theme_file_uri('/css/stackedCards.css'));
   wp_enqueue_style('kickstart_homePodcast_styles', get_theme_file_uri('/css/homePodcast.css'));
+  wp_enqueue_style('kickstart_signupNewsletter_styles', get_theme_file_uri('/css/signupNewsletter.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 

@@ -18,3 +18,16 @@ body {
 .hide{
   display: none;
 }
+
+fieldset{
+	border: none;
+}
+
+legend{
+	font-size: 1px;
+	text-indent: -999px;
+}
+
+footer{
+	margin-top: 190px;
+}

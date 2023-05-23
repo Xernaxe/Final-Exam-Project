@@ -1,0 +1,52 @@
+.homeNewsletterH{
+  color: #FF7003;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.emailInputWrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#emailInput{
+  width: 80%;
+  padding: 0 5%;
+  height: 48px;
+  background-color: #B1C1E0;
+  border: none;
+  border-radius: 43px;
+  color: black;
+}
+
+#emailInput::placeholder{
+  color: #4A5E84;
+}
+
+#termsCheckbox{
+  width: 40px;
+  height: 40px;
+}
+
+.checkboxWrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.termsCheckbox{
+  font-size: 8px;
+}
+
+.emailLabel{
+  font-size: 1px;
+  position: absolute;
+  opacity: 0;
+  top: -9999px;
+}

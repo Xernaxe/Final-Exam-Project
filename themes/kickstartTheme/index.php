@@ -6,14 +6,10 @@
   get_template_part('components/visionAndMission');
   get_template_part('components/stackedCards');
   get_template_part('components/homePodcast');
+  get_template_part('components/signupNewsletter');
   
 
-  while(have_posts()) {
-    the_post(); ?>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php the_content(); ?>
-    <hr>
-  <?php }
+
 ?>
   </main>
 <?php
