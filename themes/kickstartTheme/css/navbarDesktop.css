@@ -1,0 +1,25 @@
+.navDesktop {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+@media (min-width: 426px) {
+  .navDesktop{
+    display: flex;
+  }
+}
+.navDesktopUL {
+	display: flex;
+	gap: 2rem;
+	margin-right: 20px;
+}
+
+.navDesktopLI > a {
+	text-transform: uppercase;
+	color: #001438;
+}
+
+.navDesktopLI > a:hover {
+	color: #ff7003;
+}
