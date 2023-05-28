@@ -1,0 +1,6 @@
+.crewContainer{
+  padding:0 10px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

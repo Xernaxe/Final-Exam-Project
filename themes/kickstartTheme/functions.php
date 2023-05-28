@@ -12,7 +12,15 @@ function theme_files() {
   wp_enqueue_style('kickstart_stackedCards_styles', get_theme_file_uri('/css/stackedCards.css'));
   wp_enqueue_style('kickstart_homePodcast_styles', get_theme_file_uri('/css/homePodcast.css'));
   wp_enqueue_style('kickstart_signupNewsletter_styles', get_theme_file_uri('/css/signupNewsletter.css'));
+  wp_enqueue_style('kickstart_crewCard_styles', get_theme_file_uri('/css/crewCard.css'));
+  wp_enqueue_style('kickstart_crewContainer_styles', get_theme_file_uri('/css/crewContainer.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_files');
+
+function theme_post_setup(){
+  add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'theme_post_setup');

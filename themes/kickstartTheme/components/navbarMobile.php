@@ -1,5 +1,5 @@
 			<nav class="navMobile">
-        <a class="navMobileLogo " href="">
+        <a class="navMobileLogo " href="<?php echo site_url('') ?>">
           <img class="mobileLogo" src="<?php echo get_theme_file_uri('/images/mobileLogo.svg') ?>" alt="LOGO">
 				</a>
         <div class="burgerMenu">
@@ -14,7 +14,7 @@
 					<li class="navMobileLI"><a href="">Blog</a></li>
 					<li class="navMobileLI"><a href="">Mentors</a></li>
 					<li class="navMobileLI"><a href="">Volunteering</a></li>
-					<li class="navMobileLI"><a href="">Crew</a></li>
+					<li class="navMobileLI"><a href="<?php echo site_url('/crew') ?>">Crew</a></li>
 				</ul>
 				</div>
 			</nav>
