@@ -4,3 +4,9 @@
   flex-direction: column;
   gap: 50px;
 }
+
+@media (max-width: 375px){
+  .crewContainer{
+    padding: 0;
+  }
+}

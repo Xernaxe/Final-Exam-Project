@@ -21,14 +21,14 @@
   color: #B1C1E0;
   font-weight: 400;
   transform: translateY(5px);
-  margin-left: 20%;
+  margin-left: 24%;
 }
 
 .crewTitle{
   text-transform: uppercase;
   color: black;
   font-weight: 400;
-  margin: 0 0 41px 15%;
+  margin: 0 0 41px 20%;
 }
 
 .crewP{
@@ -60,4 +60,18 @@
   font-family: "Mukta";
   display: flex;
   gap: 5px;
+}
+
+@media (max-width: 375px){
+  .crewName{
+    margin-left: 42%;
+  }
+
+  .crewTitle{
+    margin-left: 40%;
+  }
+
+  .crewInfo{
+    left: 0;
+  }
 }
