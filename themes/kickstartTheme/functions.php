@@ -14,6 +14,8 @@ function theme_files() {
   wp_enqueue_style('kickstart_signupNewsletter_styles', get_theme_file_uri('/css/signupNewsletter.css'));
   wp_enqueue_style('kickstart_crewCard_styles', get_theme_file_uri('/css/crewCard.css'));
   wp_enqueue_style('kickstart_crewContainer_styles', get_theme_file_uri('/css/crewContainer.css'));
+  wp_enqueue_style('kickstart_mentorsContainer_styles', get_theme_file_uri('/css/mentorsContainer.css'));
+  wp_enqueue_style('kickstart_mentorsCard_styles', get_theme_file_uri('/css/mentorsCard.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 

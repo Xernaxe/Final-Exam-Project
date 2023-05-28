@@ -12,7 +12,7 @@
 					<li class="navMobileLI"><a href="">Events</a></li>
 					<li class="navMobileLI"><a href="">Podcast</a></li>
 					<li class="navMobileLI"><a href="">Blog</a></li>
-					<li class="navMobileLI"><a href="">Mentors</a></li>
+					<li class="navMobileLI"><a href="<?php echo site_url('/mentors') ?>">Mentors</a></li>
 					<li class="navMobileLI"><a href="">Volunteering</a></li>
 					<li class="navMobileLI"><a href="<?php echo site_url('/crew') ?>">Crew</a></li>
 				</ul>

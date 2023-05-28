@@ -1,0 +1,12 @@
+.mentorsContainer {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+
+@media (max-width: 375px) {
+	.mentorsContainer {
+		padding: 0px;
+	}
+}

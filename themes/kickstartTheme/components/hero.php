@@ -4,6 +4,8 @@
 
   if($pageHeader == 'Crew'){
     $pageHeader = 'This is the Crew';
+  } elseif ($pageHeader == "Mentors") {
+    $pageHeader = 'Want to Connect?';
   } else {
     $pageHeader = 'Welcome & Enjoy';
   }
