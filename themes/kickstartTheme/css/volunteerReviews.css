@@ -1,0 +1,68 @@
+.reviewCard{
+  background-color: #b1c1e057;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 456px;
+  justify-content: center;
+  position: relative;
+}
+
+.reviewCardName{
+  font-size: 32px;
+  color: #FFF;
+  font-weight: 400;
+}
+
+.reviewCardPosition{
+  color: #FFB277;
+  margin: 15px;
+  text-transform: uppercase;
+}
+
+.reviewCardReview{
+  width: 70%;
+  font-family: "Mukta";
+}
+
+.reviewWrapper{
+  position: relative;
+}
+
+.reviewCardArrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 50px 20px;
+}
+
+.reviewCardArrow_back{
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.reviewsH{
+  text-align: center;
+  color: #FF7003;
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 30px 0 110px 0;
+}
+
+.reviewPersonIMG, .reviewIMG{
+  position: absolute;
+  top: 0;
+}
+
+.reviewPersonIMG{
+  transform:translateY(-50%);
+  z-index: 1;
+}
+
+.reviewIMG{
+  transform: translate(90%, -100%);
+
+}

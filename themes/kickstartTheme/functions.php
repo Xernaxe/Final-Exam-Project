@@ -16,6 +16,11 @@ function theme_files() {
   wp_enqueue_style('kickstart_crewContainer_styles', get_theme_file_uri('/css/crewContainer.css'));
   wp_enqueue_style('kickstart_mentorsContainer_styles', get_theme_file_uri('/css/mentorsContainer.css'));
   wp_enqueue_style('kickstart_mentorsCard_styles', get_theme_file_uri('/css/mentorsCard.css'));
+  wp_enqueue_style('kickstart_volunteerSubheader_styles', get_theme_file_uri('/css/volunteerSubheader.css'));
+  wp_enqueue_style('kickstart_volunteerPerks_styles', get_theme_file_uri('/css/volunteerPerks.css'));
+  wp_enqueue_style('kickstart_volunteerDepartments_styles', get_theme_file_uri('/css/volunteerDepartments.css'));
+  wp_enqueue_style('kickstart_volunteerReviews_styles', get_theme_file_uri('/css/volunteerReviews.css'));
+  wp_enqueue_style('kickstart_volunteerBecome_styles', get_theme_file_uri('/css/volunteerBecome.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 

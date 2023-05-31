@@ -6,6 +6,8 @@
     $pageHeader = 'This is the Crew';
   } elseif ($pageHeader == "Mentors") {
     $pageHeader = 'Want to Connect?';
+  } elseif($pageHeader == 'Volunteer'){
+    $pageHeader = 'Become a volunteer';
   } else {
     $pageHeader = 'Welcome & Enjoy';
   }

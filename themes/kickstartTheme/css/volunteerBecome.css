@@ -1,0 +1,25 @@
+.becomeP{
+  font-family: "Mukta";
+  font-size: 32px;
+  font-weight: 300;
+  width: 85%;
+  margin: auto;
+}
+
+.becomeButton{
+  padding: 15px;
+  background-color: rgba(255, 178, 119, 0.48);
+  display: flex;
+  align-items: center;
+  color: #FF7003;
+  text-transform: uppercase;
+  font-size: 32px;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.becomeButtonWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
