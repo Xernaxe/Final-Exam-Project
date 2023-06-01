@@ -1,0 +1,36 @@
+.blogWhiteCard {
+	background-color: #ffffff;
+	width: 100%;
+	border-radius: 40px 40px 40px 0;
+  padding: 25px 0;
+  margin: 40px 0 20px 0;
+}
+
+
+.blogP{
+  width: 90%;
+  margin: auto;
+  font-family: "Mukta";
+}
+
+.blogP2,
+.blogP3 {
+  color: #001438;
+  margin: 20px auto;
+}
+
+.blogP1, .blogP4{
+  font-size: 22px;
+}
+
+.blogH{
+  text-align: center;
+  font-size: 24px;
+  color: #FF7003;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.blogIMG{
+  width: 100%;
+}
