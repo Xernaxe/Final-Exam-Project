@@ -8,10 +8,12 @@
     $pageHeader = 'Want to Connect?';
   } elseif($pageHeader == 'Volunteer'){
     $pageHeader = 'Become a volunteer';
-  } else {
-    $pageHeader = 'Welcome & Enjoy';
+  }elseif(is_singular()){
+    $pageHeader = get_the_title();
   }
-
+  else {
+    $pageHeader = 'Welcome & Enjoy';
+  } 
 ?>
 
 <div class="hero">

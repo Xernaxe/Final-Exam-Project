@@ -10,7 +10,7 @@
 .crewInfo {  
   display: flex;
   position: absolute;
-  left: -20%;
+  left: 0%;
   top: -25%;
 }
 
@@ -21,18 +21,18 @@
   color: #B1C1E0;
   font-weight: 400;
   transform: translateY(5px);
-  margin-left: 24%;
+  margin-left: 36%;
 }
 
 .crewTitle{
   text-transform: uppercase;
   color: black;
   font-weight: 400;
-  margin: 0 0 41px 20%;
+  margin: 0 0 41px 34%;
 }
 
 .crewP{
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Mukta";
   color: black;
 }

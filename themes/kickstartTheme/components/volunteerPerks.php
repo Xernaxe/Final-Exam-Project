@@ -5,7 +5,7 @@
 
     <div class="perksCard">
       <img class="perksIMG" src="<?php echo get_theme_file_uri('/images/friendly.svg') ?>" alt="">
-      <p class="perksP">Be surrounded by friendly people</p>
+      <p class="perksP">friendly people</p>
     </div>
     
     <div class="perksCard">

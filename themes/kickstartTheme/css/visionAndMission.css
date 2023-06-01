@@ -33,6 +33,7 @@
 
 .VMCard:nth-child(3){
   transform: translate(10%, -2.5%);
+  border: none;
 }
 
 .VMCardH {
