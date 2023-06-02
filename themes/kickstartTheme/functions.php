@@ -23,6 +23,8 @@ function theme_files() {
   wp_enqueue_style('kickstart_volunteerBecome_styles', get_theme_file_uri('/css/volunteerBecome.css'));
   wp_enqueue_style('kickstart_blogCard_styles', get_theme_file_uri('/css/blogCard.css'));
   wp_enqueue_style('kickstart_innerBlog_styles', get_theme_file_uri('/css/innerBlog.css'));
+  wp_enqueue_style('kickstart_eventsCard_styles', get_theme_file_uri('/css/eventsCard.css'));
+  wp_enqueue_style('kickstart_podcastCard_styles', get_theme_file_uri('/css/podcastCard.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
 }
 
