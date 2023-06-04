@@ -1,0 +1,76 @@
+.buyTicketBtn{
+  width: 80%;
+  height: 80px;
+  background-color: #FF7003;
+  border-radius: 40px 40px 40px 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 40px;
+}
+
+.eventP{
+  font-family: "Mukta";
+  width: 90%;
+  margin: 30px auto;
+  font-size: 20px;
+}
+
+.eventP1{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.eventP2{
+  font-size: 24px;
+}
+
+.eventScheduleCard{
+  width: 90%;
+  margin: 50px auto;
+  padding: 32px;
+  border: 1px solid #FF7003;
+  border-radius: 46px 46px 46px 0;
+}
+
+.eventScheduleLI{
+  display: flex;
+}
+
+.eventScheduleTime{
+  text-wrap: nowrap;
+  color: #FF7003;
+  font-family: "Mukta";
+  width: 30vw;
+}
+
+.eventScheduleActivity{
+  font-family: "Mukta";
+  width: 45vw;
+}
+
+.eventScheduleH{
+  color: #FF7003;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.eventSpeakersWrapper{
+  width: 90%;
+  margin: auto;
+  padding: 26px 10px;
+  border: 2px solid #FF7003;
+  border-radius: 40px 40px 40px 0;
+
+}
+
+
+.eventSpeakersCardsWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

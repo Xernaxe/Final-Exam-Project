@@ -1,7 +1,7 @@
 <?php
 // category-blog.php
 get_header();
-get_template_part('components/hero');
+get_template_part('components/globals/hero/hero');
 
 while (have_posts()) {
     the_post();

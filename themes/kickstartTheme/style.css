@@ -1,6 +1,52 @@
 /*
  Theme Name: Kickstart Aalborg Theme
  Author: Team XX
- Version: 1.0
+ Version: 1.7
 */
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Oswald';
+}
+body {
+	background-color: #001438;
+}
+
+.hero {
+	margin-bottom: 80px;
+}
+
+.hide {
+	display: none;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	font-size: 1px;
+	text-indent: -999px;
+}
+
+footer {
+	margin-top: 190px;
+}
+
+.sectionH {
+	text-align: center;
+	color: #ff7003;
+	font-size: 32px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 40px;
+}
+
+.overflow {
+	overflow: hidden;
+}

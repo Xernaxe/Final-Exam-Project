@@ -1,31 +1,79 @@
 <?php
 // category-event.php
 get_header();
-get_template_part('components/hero');
+get_template_part('components/globals/hero/hero');
 
 while (have_posts()) {
     the_post();
     ?>
-    <article>
-        <div class="post-content">
-            <?php the_content(); ?>
-            <a class="buyTicketBtn"> buy a ticket <img src="" alt=""></a>
-            <p class="eventP1">Fuckup Nights is a global movement with the mission to share publicly business failure stories.</p>
-            <p class="eventP2"></p>
-            <div class="eventPerksWrapper">
+<article>
+    <div class="post-content">
+        <?php the_content(); ?>
+        <a class="buyTicketBtn"> buy a ticket <img src="<?php echo get_theme_file_uri('/images/rightArrow_W.svg') ?>"
+                alt=""></a>
+        <p class="eventP eventP1"><?php echo get_field('event_content') ?></p>
+        <p class="eventP eventP2"><?php echo get_field('event_content2') ?></p>
 
-            </div>
-            <p class="eventP3"></p>
-            <div class="eventScheduleCard">
+        <div class="eventPerksWrapper">
+        </div>
 
-            </div>
-            <p class="eventP4"></p>
-            <div class="eventSpeakersWrapper">
+        <p class="eventP eventP3"><?php echo get_field('event_content3') ?></p>
+
+        <div class="eventScheduleCard">
+            <h2 class="eventScheduleH">Program</h2>
+            <?php $schedule = get_field('event_schedule');
+                if ($schedule){?>
+            <ul>
+                <?php $time_brackets = explode(";", $schedule);
+                    foreach ($time_brackets as $time_bracket) {
+                    $parts = explode('=', $time_bracket, 2);
+                    $start_time = $parts[0];
+                    $presentation = $parts[1];?>
+                <li class="eventScheduleLI">
+                    <p class="eventScheduleTime">
+                        <?php echo $start_time; ?>
+                    </p>
+                    <p class="eventScheduleActivity">
+                        <?php echo $presentation; ?>
+                    </p>
+                </li>
+                <?php
+                }?>
+            </ul>
+            <?php } ?>
+
+        </div>
+
+        <p class="eventP eventP4"><?php echo get_field('event_content4') ?></p>
+
+        <div class="eventSpeakersWrapper">
+            <h2 class="eventScheduleH">Speakers</h2>
+
+            <div class="eventSpeakersCardsWrapper">
+
+                <div class="mentorsCard">
+                    <div class="mentorsCardWrapper">
+                        <div class="mentorsCardLeft">
+                            <img style="width: 70px;" src="<?php echo get_theme_file_uri('/images/mentorPhoto.png') ?>" alt="">
+
+                        </div>
+                        
+                        <div class="mentorsCardRight">
+                            <h3 class="mentorsCardCompany">Lorelain Gilmore</h3>
+                            <p style="color: #001438" class="mentorsCardName">DragonFly</p>
+                            <p style="color: #001438; font-weight: 300; line-height: 13px" class="mentorsCardTitle">CEO</p>
+                            <div class="mentorsCardSocials">
+                                <a class="mentorsCardA" href="">Lorelain Gilmore<img src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-    </article>
-    <?php
+    </div>
+</article>
+<?php
 }
 
 get_footer();

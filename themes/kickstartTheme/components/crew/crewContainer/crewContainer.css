@@ -1,0 +1,12 @@
+.crewContainer{
+  padding: 0 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media (max-width: 375px){
+  .crewContainer{
+    padding: 0;
+  }
+}

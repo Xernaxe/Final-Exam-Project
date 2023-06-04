@@ -1,0 +1,20 @@
+.mentorsContainer {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px
+}
+
+.mentorsContainerP{
+	font-family: "Mukta";
+	font-size: 22px;
+}
+
+@media (max-width: 375px) {
+	.mentorsContainer {
+		padding: 0px;
+	}
+	.mentorsContainerP {
+		margin: 0 10px;
+	}
+}

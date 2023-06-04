@@ -7,12 +7,12 @@ get_header(); ?>
 <main>
 
 <?php 
-get_template_part('components/hero');
-get_template_part('components/volunteerSubheader');
-get_template_part('components/volunteerPerks');
-get_template_part('components/volunteerDepartments');
-get_template_part('components/volunteerReviews');
-get_template_part('components/volunteerBecome');
+get_template_part('components/globals/hero/hero');
+get_template_part('components/volunteer/volunteerSubheader/volunteerSubheader');
+get_template_part('components/volunteer/volunteerPerks/volunteerPerks');
+get_template_part('components/volunteer/volunteerDepartments/volunteerDepartments');
+get_template_part('components/volunteer/volunteerReviews/volunteerReviews');
+get_template_part('components/volunteer/volunteerBecome/volunteerBecome');
 ?>
 </main>
 <?php

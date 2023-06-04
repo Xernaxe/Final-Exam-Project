@@ -6,7 +6,6 @@
   </head>
   <body>
     <header>
-			<?php get_template_part('components/navbarDesktop'); ?>
-			<?php get_template_part('components/navbarMobile'); ?>
+			<?php get_template_part('components/globals/navbar/navbar'); ?>
 
     </header>

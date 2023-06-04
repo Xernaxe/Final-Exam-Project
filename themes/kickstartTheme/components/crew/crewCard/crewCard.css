@@ -1,0 +1,84 @@
+.crewBox{
+  background-color: #B1C1E0;
+  border-radius: 56px 56px 56px 0;
+  padding: 5px 22px 10px 22px;
+  position: relative;
+}
+
+
+
+.crewInfo {  
+  display: flex;
+  position: absolute;
+  left: 0%;
+  top: -25%;
+}
+
+
+.crewName{
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #B1C1E0;
+  font-weight: 400;
+  transform: translateY(5px);
+  margin-left: 36%;
+}
+
+.crewTitle{
+  text-transform: uppercase;
+  color: black;
+  font-weight: 400;
+  margin: 0 0 41px 34%;
+}
+
+.crewP{
+  font-size: 12px;
+  font-family: "Mukta";
+  color: black;
+}
+
+.buttonWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 11px;
+}
+
+.crewSocial{
+  color: black;
+  font-weight: 300;
+  margin-right: 5px;
+  font-family: "Mukta";
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.crewButton{
+  padding: 8px 19px;
+  background-color: #4a5e8433;
+  border-radius: 16px;
+  color: black;
+  font-weight: 300;
+  font-family: "Mukta";
+  display: flex;
+  gap: 5px;
+}
+.crewSocialIMG{
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 375px){
+  .crewName{
+    margin-left: 42%;
+  }
+
+  .crewTitle{
+    margin-left: 40%;
+  }
+
+  .crewInfo{
+    left: 0;
+  }
+}
