@@ -1,13 +1,17 @@
 <?php
 // category-blog.php
 get_header();
+?>
+
+<main>
+<?php
 get_template_part('components/globals/hero/hero');
 
 while (have_posts()) {
     the_post();
     ?>
     <article>
-        <div class="post-content">
+        <div class="postContent">
             <?php the_content(); ?>
             <p class="blogP blogP1"><?php echo get_field('post_content'); ?></p>
 
@@ -40,7 +44,7 @@ while (have_posts()) {
                 <?php
                 if(get_field('post_content4')){
                     ?>
-                    <h3 class="blogH">Take Away</h3>
+                    <h2 class="sectionH">Take Away</h2>
                     <p class="blogP blogP4"><?php echo get_field('post_content4'); ?></p>
                     <?php
                 }
@@ -49,6 +53,13 @@ while (have_posts()) {
     </article>
     <?php
 }
+?>
 
+<section class="innerBlogSlider">
+    <h2 class="sectionH">Similar Articles</h2>
+    <?php  get_template_part('components/globals/blogSlider/blogSlider');?>
+</section>
+</main>
+<?php
 get_footer();
 ?>

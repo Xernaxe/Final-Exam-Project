@@ -27,7 +27,7 @@
 	z-index: 20;
 }
 .mobileLogo {
-	width: 100%;
+	width: 40vw;
 }
 
 .burgerMenu {
@@ -39,9 +39,9 @@
 }
 
 .burgerLine {
-	width: 48px;
-	height: 8px;
-	background-color: #ffb277;
+    width: 38px;
+    height: 2px;
+    background-color: #001438;
 }
 
 .navMobileUL {
@@ -57,7 +57,7 @@
 .navMobileLI > a {
 	text-transform: uppercase;
 	color: #ff7003;
-	font-size: 40px;
+	font-size: 2.5rem;
 }
 
 .navMobileLI > a:hover {

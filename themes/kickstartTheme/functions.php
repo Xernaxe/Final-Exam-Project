@@ -30,6 +30,7 @@ function theme_files() {
   wp_enqueue_style('kickstart_blogPostsSlider_styles', get_theme_file_uri('/components/blog/blogPostsSlider/blogPostsSlider.css'));
   wp_enqueue_style('kickstart_departments_styles', get_theme_file_uri('/components/globals/departments/departments.css'));
   wp_enqueue_style('kickstart_contactUsButton_styles', get_theme_file_uri('/components/globals/contactUsButton/contactUsButton.css'));
+  wp_enqueue_style('kickstart_blogSlider_styles', get_theme_file_uri('/components/globals/blogSlider/blogSlider.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/js/navbar.js', array(), '1.0', true);
   wp_enqueue_script('volunteerReviewsJs', get_template_directory_uri() . '/components/volunteer/volunteerReviews/volunteerReviews.js', array(), '1.0', true);
   wp_enqueue_script('volunteerPerksJs', get_template_directory_uri() . '/components/volunteer/volunteerPerks/volunteerPerks.js', array(), '1.0', true);

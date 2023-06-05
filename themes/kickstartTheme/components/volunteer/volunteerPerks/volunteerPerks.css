@@ -24,7 +24,7 @@
 
 .perksH {
 	color: #ff7003;
-	font-size: 32px;
+	font-size: 2rem;
 	text-align: center;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -32,7 +32,7 @@
 }
 
 .perksP {
-	font-size: 24px;
+	font-size: clamp(1rem, 5vw, 1.5rem);
 	color: #001438;
 	text-transform: uppercase;
 	margin: 5% 5%;

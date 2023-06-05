@@ -12,7 +12,7 @@
         <p class="perksP">Coffe meetings</p>
       </div>
       <div class="perksCard">
-        <img class="perksIMG" src="<?php echo get_theme_file_uri('/images/perkhearth_B.svg') ?>" alt="">
+        <img class="perksIMG" src="<?php echo get_theme_file_uri('/images/perkHearth_B.svg') ?>" alt="">
         <p class="perksP">Self-develoment</p>
       </div>
       <div class="perksCard">

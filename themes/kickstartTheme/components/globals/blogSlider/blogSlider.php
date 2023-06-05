@@ -8,8 +8,8 @@ $posts = get_posts(array(
 ?>
 
 <div class="reviewWrapper">
-    <img class="reviewCardArrow reviewCardArrow_back hide" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Back">
-    <img class="reviewCardArrow reviewCardArrow_next" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Next">
+    <img class="reviewCardArrow blogSliderArrow reviewCardArrow_back hide" style="transform: translateY(-50%) rotate(180deg);" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Back">
+    <img class="reviewCardArrow blogSliderArrow reviewCardArrow_next" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Next">
     
     <?php
     if($posts){

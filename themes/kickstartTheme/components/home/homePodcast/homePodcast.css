@@ -13,11 +13,11 @@
 	font-weight: 400;
 	margin: 40px;
 	text-align: center;
-	font-size: 32px;
+	font-size: 2rem;
 }
 
 .homePodcastCardP {
 	font-family: 'Mukta';
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: lighter;
 }

@@ -1,13 +1,16 @@
+
 <?php
 // category-event.php
 get_header();
+?>
+<main>
+<?php
 get_template_part('components/globals/hero/hero');
-
 while (have_posts()) {
     the_post();
     ?>
 <article>
-    <div class="post-content">
+    <div class="articleContent">
         <?php the_content(); ?>
         <a class="buyTicketBtn"> buy a ticket <img src="<?php echo get_theme_file_uri('/images/rightArrow_W.svg') ?>"
                 alt=""></a>
@@ -74,7 +77,9 @@ while (have_posts()) {
     </div>
 </article>
 <?php
-}
+}?>
 
+</main>
+<?php
 get_footer();
 ?>

@@ -1,7 +1,7 @@
 .stackedCardsWrapper {
 	display: flex;
 	flex-direction: column;
-  margin: 0 15px;
+  margin: 0 5%;
 }
 
 .stackedCard {
@@ -29,21 +29,19 @@
 
 .stackedCardH {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 2rem;
   color: #FF7003;
   font-weight: 400;
 }
 
 .stackedCardP {
   font-family: "Mukta";
-  font-size: 16px;
+  font-size: 1rem;
   color: #001438;
   margin-bottom: 30px;
 }
-.card2P{
-  color: #B1C1E0;
-}
-.card3P{
+
+.card3P, .card2P{
   color: #FFF;
 }
 

@@ -8,56 +8,60 @@
 	height: 100%;
 	width: 100%;
 	position: absolute;
-  z-index: 1;
+	z-index: 1;
 }
 
 .heroWrapper {
 	position: relative;
 }
 
-.heroH{
-  text-transform: uppercase;
-  color: #FF7003;
-  font-size: 48px;
-  position: absolute;
-  font-weight: 400;
-  z-index: 2;
-  bottom: -5%;
-  text-align: center;
-  width: 100%;
+.hero {
+	padding: 0;
 }
 
-.heroPodcastWrapper{
-  position: absolute;
-  top: 15%;
-  z-index: 1;
-  margin: 0 24px;
+.heroH {
+	text-transform: uppercase;
+	color: #ff7003;
+	font-size: clamp(1.5rem, 11vw, 3rem);
+	position: absolute;
+	font-weight: 400;
+	z-index: 2;
+	bottom: 20%;
+	/* text-align: center; */
+	width: 100%;
+	padding: 0 6vw;
 }
 
-
-.heroIMG{
-  width: 100%;
+.heroPodcastWrapper {
+	position: absolute;
+	top: 15%;
+	z-index: 1;
+	margin: 0 24px;
 }
 
-.heroPodcastH2{
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #001438;
-  font-weight: 400;
-}
-.heroPodcastH1{
-  text-transform: uppercase;
-  color: #FF7003;
-  font-size: 32px;
-  font-weight: 400;
+.heroIMG {
+	width: 100%;
 }
 
-.heroPodcastP{
-  font-family: "Mukta";
-  font-size: 16px;
+.heroPodcastH2 {
+	text-transform: uppercase;
+	font-size: clamp(1.5rem, 7vw, 2rem);
+	color: #001438;
+	font-weight: 400;
+}
+.heroPodcastH1 {
+	text-transform: uppercase;
+	color: #ff7003;
+	font-size: clamp(1.5rem, 10vw, 2.5rem);
+	font-weight: 400;
 }
 
-.heroAudio{
-  width: 100%;
-  margin: 40px 0 20px 0;
+.heroPodcastP {
+	font-family: 'Mukta';
+	font-size: 1rem;
+}
+
+.heroAudio {
+	width: 100%;
+	margin: 40px 0 20px 0;
 }

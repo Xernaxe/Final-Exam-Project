@@ -17,24 +17,24 @@
 
 .crewName{
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #B1C1E0;
   font-weight: 400;
-  transform: translateY(5px);
-  margin-left: 36%;
+  margin-left: 105px;
 }
 
 .crewTitle{
   text-transform: uppercase;
   color: black;
-  font-weight: 400;
-  margin: 0 0 41px 34%;
+  font-weight: 300;
+  margin-bottom: 2px;
 }
 
 .crewP{
-  font-size: 12px;
+  font-size: 0.8rem;
   font-family: "Mukta";
   color: black;
+  margin: 6vw 0 4vw 0;
 }
 
 .buttonWrapper{
@@ -50,8 +50,9 @@
   margin-right: 5px;
   font-family: "Mukta";
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 5px;
+  line-height: 15px;
 }
 
 .crewButton{
@@ -65,20 +66,39 @@
   gap: 5px;
 }
 .crewSocialIMG{
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 
-@media (max-width: 375px){
+.crewTitle, .crewSocial{
+  margin-left: 83px;
+}
+
+.crewInfoIMG{
+  /* width: clamp(110px, 30vw, 130px); */
+  width: 97px;
+}
+
+/* @media (max-width: 375px){
   .crewName{
-    margin-left: 42%;
+    margin-left: 33%;
   }
 
-  .crewTitle{
-    margin-left: 40%;
+  .crewTitle, .crewSocial{
+    margin-left: 30%;
   }
 
   .crewInfo{
     left: 0;
   }
 }
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .crewName{
+    margin-left: 105px;
+  }
+
+  .crewTitle, .crewSocial{
+    margin-left: 83px;
+  }
+} */

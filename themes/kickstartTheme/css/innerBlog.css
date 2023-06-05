@@ -3,7 +3,7 @@
 	width: 100%;
 	border-radius: 40px 40px 40px 0;
   padding: 25px 0;
-  margin: 40px 0 20px 0;
+  margin: 40px 0 48px 0;
 }
 
 
@@ -11,6 +11,7 @@
   width: 90%;
   margin: auto;
   font-family: "Mukta";
+  font-size: clamp(1rem, 4.5vw, 1.5rem);
 }
 
 .blogP2,
@@ -19,13 +20,10 @@
   margin: 20px auto;
 }
 
-.blogP1, .blogP4{
-  font-size: 22px;
-}
 
 .blogH{
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FF7003;
   font-weight: 400;
   text-transform: uppercase;

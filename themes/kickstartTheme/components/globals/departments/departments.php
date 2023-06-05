@@ -9,15 +9,12 @@
 
             <div class="departmentsPopup">
                 <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
-                <img class="departmentsPopupClose" src="<?php echo get_theme_file_uri('/images/closeBtn_O.svg') ?>" alt="">
                 <h4 class="departmentsPopupH">Marketing department</h4>
                 <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
                     oriented from previous events, partially business plans, etc.
                     If you would have other volunteer proposals within the marketing field do not hesitate to contact
                     us.</p>
-                <div class="becomeButtonWrapper">
-                    <a class="becomeButton">Become a volunteer <img src="<?php echo get_theme_file_uri("/images/rightArrowButton.svg") ?>" alt=""></a>
-                </div>
+                <?php get_template_part('components/globals/contactUsButton/contactUsButton') ?>
             </div>
 
         </div>
@@ -31,15 +28,12 @@
             
             <div class="departmentsPopup hide">
                 <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
-                <img class="departmentsPopupClose" src="<?php echo get_theme_file_uri('/images/closeBtn_O.svg') ?>" alt="">
                 <h4 class="departmentsPopupH">Marketing</h4>
                 <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
                     oriented from previous events, partially business plans, etc.
                     If you would have other volunteer proposals within the marketing field do not hesitate to contact
                     us.</p>
-                <div class="becomeButtonWrapper">
-                    <a class="becomeButton">Become a volunteer <img src="<?php echo get_theme_file_uri("/images/rightArrowButton.svg") ?>" alt=""></a>
-                </div>
+                <?php get_template_part('components/globals/contactUsButton/contactUsButton') ?>
             </div>
             
         </div>
@@ -54,15 +48,12 @@
             
             <div class="departmentsPopup hide">
                 <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
-                <img class="departmentsPopupClose" src="<?php echo get_theme_file_uri('/images/closeBtn_O.svg') ?>" alt="">
                 <h4 class="departmentsPopupH">Marketing</h4>
                 <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
                     oriented from previous events, partially business plans, etc.
                     If you would have other volunteer proposals within the marketing field do not hesitate to contact
                     us.</p>
-                <div class="becomeButtonWrapper">
-                    <a class="becomeButton">Become a volunteer <img src="<?php echo get_theme_file_uri("/images/rightArrowButton.svg") ?>" alt=""></a>
-                </div>
+                <?php get_template_part('components/globals/contactUsButton/contactUsButton') ?>
             </div>
             
         </div>
@@ -77,15 +68,12 @@
             
             <div class="departmentsPopup hide">
                 <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
-                <img class="departmentsPopupClose" src="<?php echo get_theme_file_uri('/images/closeBtn_O.svg') ?>" alt="">
                 <h4 class="departmentsPopupH">Marketing</h4>
                 <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
                     oriented from previous events, partially business plans, etc.
                     If you would have other volunteer proposals within the marketing field do not hesitate to contact
                     us.</p>
-                <div class="becomeButtonWrapper">
-                    <a class="becomeButton">Become a volunteer <img src="<?php echo get_theme_file_uri("/images/rightArrowButton.svg") ?>" alt=""></a>
-                </div>
+                <?php get_template_part('components/globals/contactUsButton/contactUsButton') ?>
             </div>
             
         </div>
@@ -100,15 +88,12 @@
             
             <div class="departmentsPopup hide">
                 <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
-                <img class="departmentsPopupClose" src="<?php echo get_theme_file_uri('/images/closeBtn_O.svg') ?>" alt="">
                 <h4 class="departmentsPopupH">Marketing</h4>
                 <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
                     oriented from previous events, partially business plans, etc.
                     If you would have other volunteer proposals within the marketing field do not hesitate to contact
                     us.</p>
-                <div class="becomeButtonWrapper">
-                    <a class="becomeButton">Become a volunteer <img src="<?php echo get_theme_file_uri("/images/rightArrowButton.svg") ?>" alt=""></a>
-                </div>
+                <?php get_template_part('components/globals/contactUsButton/contactUsButton') ?>
             </div>
             
         </div>
@@ -122,15 +107,9 @@ const departmentCardsWrappers = document.querySelectorAll(".departmentsCardWrapp
 departmentCardsWrappers.forEach(cardWrapper => {
     const departmentCard = cardWrapper.querySelector(".departmentsCard");
     const departmentPopup = cardWrapper.querySelector(".departmentsPopup");
-    const departmentPopupClose =cardWrapper.querySelector('.departmentsPopupClose')
-    const departmentArrow =cardWrapper.querySelector('.departmentsArrow')
+    const departmentArrow = cardWrapper.querySelector('.departmentsArrow')
 
     departmentCard.addEventListener("click", () => {
-        departmentPopup.classList.toggle('hide')
-        departmentArrow.classList.toggle('rotate')
-    });
-    
-    departmentPopupClose.addEventListener("click", () => {
         departmentPopup.classList.toggle('hide')
         departmentArrow.classList.toggle('rotate')
     });

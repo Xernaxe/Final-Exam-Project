@@ -25,7 +25,7 @@
 
             <div class="blogCardOverlay"></div>
             <div class="blogContent">
-                <h3 class="blogCardTitle"><?php the_title(); ?></h3>
+                <h2 class="blogCardTitle"><?php the_title(); ?></h2>
                 <p class="blogCardDetails"><?php echo get_field('post_author'); ?></p>
                 <p class="blogCardDetails"><?php echo get_field('post_date'); ?></p>
                 <p class="blogCardDescription"><?php echo wp_trim_words(get_field('post_content'), 20); ?></p>

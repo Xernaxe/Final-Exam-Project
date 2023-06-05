@@ -1,8 +1,9 @@
 <section class="podcastsWrapper">
   
-  <div class="podcastCard">
-    <h3 class="podcastCardH">How Great Leaders Take on Uncertainty</h3>
+  <div class="podcastCard podcastCurrentlyPlaying">
+    <h2 class="podcastCardH">How Great Leaders Take on Uncertainty</h2>
     <p class="podcastCardP">In a constantly changing world, it's impossible for leaders to provide employees with the assurance they want, says Vimeo CEO Anjali Sud. ..</p>
+
 
     <div class="podcastCardDetails">
       <div class="podcastCardTime">
@@ -15,7 +16,7 @@
   </div>
   
   <div class="podcastCard">
-    <h3 class="podcastCardH">How Great Leaders Take on Uncertainty</h3>
+    <h2 class="podcastCardH">How Great Leaders Take on Uncertainty</h2>
     <p class="podcastCardP">In a constantly changing world, it's impossible for leaders to provide employees with the assurance they want, says Vimeo CEO Anjali Sud. ../p>
 
     <div class="podcastCardDetails">

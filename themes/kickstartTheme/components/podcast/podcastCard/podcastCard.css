@@ -2,6 +2,7 @@
 	border-radius: 40px 40px 40px 0;
 	border: 1px solid #ff7003;
 	padding: 25px 30px;
+	position: relative;
 }
 
 .podcastCardDetails {
@@ -23,19 +24,36 @@
 .podcastCardH {
 	margin-bottom: 10px;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	color: #ff7003;
 }
 
 .podcastCardP {
 	font-family: 'Mukta';
-	font-size: 14px;
+	font-size: 0.9rem;
 }
 
 .podcastsWrapper {
 	margin: 24px;
 	display: flex;
 	flex-direction: column;
-	gap: 35px;
+	gap: 24px;
+}
+
+.podcastCurrentlyPlaying::before{
+	content: '';
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
+    background-color: #ff7003;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translate(-50%);
+}
+
+.podcastCardPlay{
+	position: relative;
+    z-index: 1;
 }

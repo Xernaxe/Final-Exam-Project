@@ -15,7 +15,7 @@
         
       <div class="eventsCard">
         
-        <h3 class="eventsCardName"><?php echo get_field('event_name'); ?></h3>
+        <h2 class="eventsCardName"><?php echo get_field('event_name'); ?></h2>
         <p class="eventsCardDesc"><?php echo wp_trim_words(get_field('event_content'), 20); ?></p>
         
         <div class="eventsDetails">

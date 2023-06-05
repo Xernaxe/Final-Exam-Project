@@ -1,6 +1,6 @@
-<div class="VMWrapper homePodcastWrapper">
+<section class="VMWrapper homePodcastWrapper">
 
-  <h2 class="homePodcastH">Enrich your network through our events</h2>
+  <h2 class="sectionH homeNetworkH">Enrich your network through our events</h2>
   
   <div class="VMCard homeNetworkCard HNCard"></div>
   
@@ -10,4 +10,4 @@
   </div>
   
 
-</div>
+</section>

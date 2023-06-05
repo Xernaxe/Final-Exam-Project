@@ -2,23 +2,36 @@
 
 $pageHeader = get_the_title();
 
-if ($pageHeader == 'Crew') {
-  $pageHeader = 'This is the Crew';
-} elseif ($pageHeader == "Mentors") {
-  $pageHeader = 'Want to Connect?';
-} elseif ($pageHeader == 'Volunteer') {
-  $pageHeader = 'Become a volunteer';
-} elseif ($pageHeader == 'Podcast'){
-  $pageHeader = '';
-} elseif (is_singular()) {
-  $pageHeader = get_the_title();
-} else {
-  $pageHeader = 'Welcome & Enjoy';
+switch ($pageHeader) {
+    case 'Crew':
+        $pageHeader = 'Meet our crew';
+        break;
+    case 'Mentors':
+        $pageHeader = 'WANT TO CONNECT with mentors?';
+        break;
+    case 'Volunteer':
+        $pageHeader = "Let's Volunteer";
+        break;
+    case 'Podcast':
+        $pageHeader = '';
+        break;
+    case 'Events':
+        $pageHeader = 'Entrepreneur Events';
+        break;
+    case 'Blog':
+        $pageHeader = 'Our Blogs';
+        break;
+    default:
+        if (is_singular()) {
+            $pageHeader = get_the_title();
+        } else {
+            $pageHeader = 'Welcome to Kickstart Aalborg & enjoy';
+        }
+        break;
 }
-
 ?>
 
-<div class="hero">
+<section class="hero">
   <div class="heroWrapper">
 
     <div class="heroOverlay"></div>
@@ -49,23 +62,27 @@ if ($pageHeader == 'Crew') {
     <h1 class="heroH"><?php echo $pageHeader ?></h1>
 
   </div>
-</div>
+</section>
 
 <script>
 
-function manageAudioPlayer(audioSrc, playAudioSignal){
+function manageAudioPlayer(audioSrc, playAudioSignal) {
   let audioPlayer = document.querySelector('.heroAudio');
   let source = document.querySelector('.heroSource');
 
-  if(audioPlayer.readyState !== 4 || source.src !== audioSrc){
+  audioPlayer.oncanplaythrough = () => {
+    if (playAudioSignal && audioPlayer.paused) {
+      audioPlayer.play();
+    } else if (!playAudioSignal && !audioPlayer.paused) {
+      audioPlayer.pause();
+    }
+  };
+
+  if (audioPlayer.src !== audioSrc) {
     source.src = audioSrc;
     audioPlayer.load();
   }
-  if (playAudioSignal && audioPlayer.paused) {
-    audioPlayer.play();
-  } else if (playAudioSignal && !audioPlayer.paused) {
-    audioPlayer.pause()
-  }
+
   audioPlayer.volume = 0.1;
 }
 
@@ -86,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let firstCardH = podcastCards[0].querySelector('.podcastCardH').textContent;
   let firstCardP = podcastCards[0].querySelector('.podcastCardP').textContent;
   let firstCardAudio = podcastCards[0].querySelector('.podcastCardAudio').src;
+  let audioIsPlaying = false;
 
   changeHeroContent(firstCardH, firstCardP, firstCardAudio);
 
@@ -95,8 +113,36 @@ document.addEventListener('DOMContentLoaded', function() {
     let desc = card.querySelector('.podcastCardP').textContent;
     let audioSrc = card.querySelector('.podcastCardAudio').src;
 
-    playButton.addEventListener('click', function() {
-      changeHeroContent(title, desc, audioSrc, true);
+    card.addEventListener('click', () => {
+      podcastCards.forEach(card2 => {
+        card2.classList.remove('podcastCurrentlyPlaying')
+      })
+      card.classList.add('podcastCurrentlyPlaying')
+
+      changeHeroContent(title, desc, audioSrc, false);
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    })
+    
+    playButton.addEventListener('click', function(e) {
+      e.stopPropagation(); // TO not get triggered twice by the even propagation chain in DOM node
+
+      podcastCards.forEach(card2 => {
+        card2.classList.remove('podcastCurrentlyPlaying');
+      });
+      card.classList.add('podcastCurrentlyPlaying');
+
+      if (audioIsPlaying) {
+        changeHeroContent(title, desc, audioSrc, false);
+        audioIsPlaying = false;
+      } else {
+        changeHeroContent(title, desc, audioSrc, true);
+        audioIsPlaying = true;
+      }
+
       window.scrollTo({
         top: 0,
         behavior: 'smooth'

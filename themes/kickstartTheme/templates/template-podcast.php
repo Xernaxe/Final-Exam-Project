@@ -2,10 +2,17 @@
 /*
 Template Name: Template podcast page
 */
-get_header();
+get_header();?>
 
-get_template_part('components/globals/hero/hero');
-get_template_part('components/podcast/podcastCard/podcastCard');
+<main>
 
+<?php
+    get_template_part('components/globals/hero/hero');
+    get_template_part('components/podcast/podcastCard/podcastCard');
+?>
+
+</main>
+
+<?php
 get_footer();
 ?>

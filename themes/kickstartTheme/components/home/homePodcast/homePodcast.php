@@ -1,6 +1,6 @@
-<div class="VMWrapper homePodcastWrapper">
+<section class="VMWrapper homePodcastWrapper">
 
-  <h2 class="homePodcastH">Listen to Learn</h2>
+  <h2 class="sectionH">Listen to Learn</h2>
 
   <div class="VMCard">
     <p class="homePodcastCardP">On our PODCAST page you can listen anytime even when you have no time at all.<br><br>
@@ -10,4 +10,4 @@
   
   <div class="VMCard homePodcastCard"></div>
 
-</div>
+</section>
