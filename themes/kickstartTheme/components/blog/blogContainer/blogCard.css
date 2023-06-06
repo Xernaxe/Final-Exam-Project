@@ -36,7 +36,7 @@
 }
 
 .blogCardTitle {
-	color: #FF7003;
+	color: #ff7003;
 	font-size: 32px;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -50,4 +50,21 @@
 .blogCardDescription {
 	font-family: 'Mukta';
 	margin-top: 5%;
+}
+
+@media (min-width: 1024px) {
+	.blogCard,
+	.blogCardIMG,
+	.blogCardOverlay {
+		width: 400px;
+		height: 400px;
+	}
+
+	.blogContainer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 850px;
+		margin: auto;
+	}
 }

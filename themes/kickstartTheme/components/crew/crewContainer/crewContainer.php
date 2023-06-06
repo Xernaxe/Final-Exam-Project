@@ -20,7 +20,7 @@
                 <div class="crewBox">
 
                     <div class="crewInfo">
-                    <?php
+                        <?php
                             $image_array = get_field('crew_image');
                             if ($image_array) {
                                 $image_url = $image_array['url'];
@@ -30,17 +30,30 @@
                                 echo '<img class="crewInfoIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="">';
                             }                    
                         ?>
-                    </div>
-                    
-                    <h4 class="crewTitle"><?php echo get_field('crew_position') ?></h4>
-                    <a class="crewSocial" href="<?php echo get_field('crew_linkedInLink') ?>">
-                        <img class="crewSocialIMG" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt="">
-                        <?php echo get_field('crew_name') ?>
-                    </a>
-                    
-                    <p class="crewP"><?php echo get_field('crew_description') ?></p>
+                        </div>
+                        <!-- <div class="crewMobileWrapper"> -->
 
-                </div>
+                            <h4 class="crewTitle"><?php echo get_field('crew_position') ?></h4>
+                            <a class="crewSocial" href="<?php echo get_field('crew_linkedInLink') ?>">
+                                <img class="crewSocialIMG" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt="">
+                                <?php echo get_field('crew_name') ?>
+                            </a>
+                            
+                            <p class="crewP"><?php echo get_field('crew_description') ?></p>
+                        <!-- </div> -->
+
+                        <!-- <div class="crewDesktopWrapper">
+                            <h3 class="crewNameDesktop"><?php echo get_field('crew_name') ?></h3>
+                            <h4 class="crewTitleDesktop"><?php echo get_field('crew_position') ?></h4>
+                            <a class="crewSocialDesktop" href="<?php echo get_field('crew_linkedInLink') ?>">
+                                <img class="crewSocialIMG" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt="">
+                                <?php echo get_field('crew_name') ?>
+                            </a>
+                            
+                            <p class="crewPDesktop"><?php echo get_field('crew_description') ?></p>
+                        </div> -->
+
+                    </div>
                 </div>
             <?php
         }

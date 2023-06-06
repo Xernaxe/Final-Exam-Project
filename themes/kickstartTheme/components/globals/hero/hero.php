@@ -35,7 +35,8 @@ switch ($pageHeader) {
   <div class="heroWrapper">
 
     <div class="heroOverlay"></div>
-    <img class="heroIMG" src="<?php echo get_theme_file_uri('/images/heroimg.png') ?>" alt="Hero Img">
+    <img class="heroIMGMobile" src="<?php echo get_theme_file_uri('/images/heroimg.png') ?>" alt="Hero Img">
+    <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroimg.png') ?>" alt="Hero Img">
 
     <?php
     if (get_the_title() == "Podcast") {
@@ -53,7 +54,9 @@ switch ($pageHeader) {
 
         <p class="heroPodcastP"></p>
 
-
+        <a class="podcastCardSpotifyBtn">
+            Listen to on Spotify
+        </a>
       </div>
       <?php
     }
@@ -101,8 +104,9 @@ function changeHeroContent(cardH, cardP, audioSrc, playAudioSignal) {
 document.addEventListener('DOMContentLoaded', function() {
   let podcastCards = document.querySelectorAll('.podcastCard');
   let firstCardH = podcastCards[0].querySelector('.podcastCardH').textContent;
-  let firstCardP = podcastCards[0].querySelector('.podcastCardP').textContent;
+  let firstCardP = podcastCards[0].querySelector('.podcastCardP').dataset.podcast_description;
   let firstCardAudio = podcastCards[0].querySelector('.podcastCardAudio').src;
+  podcastCards[0].classList.add('podcastCurrentlyPlaying')
   let audioIsPlaying = false;
 
   changeHeroContent(firstCardH, firstCardP, firstCardAudio);
@@ -110,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
   podcastCards.forEach(function(card) {
     let playButton = card.querySelector('.podcastCardPlay');
     let title = card.querySelector('.podcastCardH').textContent;
-    let desc = card.querySelector('.podcastCardP').textContent;
+    let desc = card.querySelector('.podcastCardP').dataset.podcast_description;
     let audioSrc = card.querySelector('.podcastCardAudio').src;
 
     card.addEventListener('click', () => {

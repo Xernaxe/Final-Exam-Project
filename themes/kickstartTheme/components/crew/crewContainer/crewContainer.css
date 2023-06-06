@@ -1,94 +1,182 @@
-.crewContainer{
-  margin: 0 6vw;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-  gap: 40px;
+.crewContainer {
+	margin: 0 6vw;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+	gap: 40px;
 }
 
-.crewBox{
-  background-color: #B1C1E0;
-  border-radius: 56px 56px 56px 0;
-  padding: 5px 22px 10px 22px;
-  position: relative;
+.crewDesktopWrapper {
+	display: none;
 }
 
-
-
-.crewInfo {  
-  display: flex;
-  position: absolute;
-  left: 0%;
-  top: -25%;
+.crewBox {
+	background-color: #b1c1e0;
+	border-radius: 56px 56px 56px 0;
+	padding: 5px 22px 10px 22px;
+	position: relative;
 }
 
-
-.crewName{
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  color: #B1C1E0;
-  font-weight: 400;
-  margin-left: 105px;
+.crewInfo {
+	display: flex;
+	position: absolute;
+	left: 0%;
+	top: -45px;
 }
 
-.crewTitle{
-  text-transform: uppercase;
-  color: black;
-  font-weight: 300;
-  margin-bottom: 2px;
+.crewName {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: #b1c1e0;
+	font-weight: 400;
+	margin-left: 105px;
 }
 
-.crewP{
-  font-size: 0.8rem;
-  font-family: "Mukta";
-  color: black;
-  margin: 6vw 0 4vw 0;
+.crewTitle {
+	text-transform: uppercase;
+	color: black;
+	font-weight: 300;
+	margin-bottom: 2px;
 }
 
-.buttonWrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 11px;
+.crewP {
+	font-size: 0.8rem;
+	font-family: 'Mukta';
+	color: black;
+	margin: 6vw 0 4vw 0;
 }
 
-.crewSocial{
-  color: black;
-  font-weight: 300;
-  margin-right: 5px;
-  font-family: "Mukta";
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  line-height: 15px;
+.buttonWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-top: 11px;
 }
 
-.crewButton{
-  padding: 8px 19px;
-  background-color: #4a5e8433;
-  border-radius: 16px;
-  color: black;
-  font-weight: 300;
-  font-family: "Mukta";
-  display: flex;
-  gap: 5px;
-}
-.crewSocialIMG{
-  width: 24px;
-  height: 24px;
+.crewSocial {
+	color: black;
+	font-weight: 300;
+	margin-right: 5px;
+	font-family: 'Mukta';
+	display: flex;
+	align-items: flex-end;
+	gap: 5px;
+	line-height: 15px;
 }
 
-.crewTitle, .crewSocial{
-  margin-left: 83px;
+.crewButton {
+	padding: 8px 19px;
+	background-color: #4a5e8433;
+	border-radius: 16px;
+	color: black;
+	font-weight: 300;
+	font-family: 'Mukta';
+	display: flex;
+	gap: 5px;
+}
+.crewSocialIMG {
+	width: 24px;
+	height: 24px;
 }
 
-.crewInfoIMG{
-  width: 97px;
+.crewTitle,
+.crewSocial {
+	margin-left: 83px;
 }
 
-@media (max-width: 375px){
-  .crewContainer{
-    padding: 0;
-  }
+.crewInfoIMG {
+	width: 97px;
+	height: 97px;
+	border-radius: 50%;
+}
+
+.crewNameDesktop {
+	color: black;
+	font-size: 2rem;
+	text-transform: uppercase;
+	line-height: 35px;
+	font-weight: 400;
+}
+
+.crewTitleDesktop {
+	color: black;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.crewSocialDesktop {
+	color: black;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	gap: 5px;
+}
+
+.crewPDesktop {
+	font-size: 1rem;
+	color: black;
+	font-weight: 300;
+	margin-top: 1vw;
+	width: 90%;
+}
+
+@media (max-width: 375px) {
+	.crewContainer {
+		padding: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+	.crewContainer {
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		gap: clamp(60px, 7vw, 96px);
+	}
+	.crewDesktopWrapper {
+		display: flex;
+		flex-direction: column;
+		width: 75%;
+		margin-left: auto;
+	}
+	
+
+	
+	
+	
+	.crewBox{
+		max-height: 346px;
+		height: 346px;
+		padding-bottom: 55px;
+	} 
+	.crewInfo {
+		top: 0;
+		left: -17%;
+		transform: translateY(-50%);
+	}
+
+	.crewInfoIMG {
+		width: clamp(150px, 11vw, 200px);
+		height: clamp(150px, 11vw, 200px);
+	}
+	.crewCard {
+		width: 40%;
+	}
+
+	.crewP {
+		font-size: 1rem;
+		margin-top: 1vw;
+	}
+
+	.crewTitle {
+		margin: 10px 0 16px 90px;
+	}
+
+	.crewName {
+		margin-left: 110px;
+		font-size: 2rem;
+	}
 }

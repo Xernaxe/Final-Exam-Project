@@ -1,7 +1,7 @@
 /*
  Theme Name: Kickstart Aalborg Theme
  Author: Team XX
- Version: 2
+ Version: 1.11
 */
 
 * {
@@ -16,8 +16,6 @@
 body {
 	background-color: #001438;
 }
-
-
 
 .hide {
 	display: none;
@@ -36,9 +34,12 @@ footer {
 	margin-top: 190px;
 }
 
-section, article{
+section,
+article {
 	padding: 0 0 48px 0;
 }
+
+
 
 .sectionH {
 	text-align: center;

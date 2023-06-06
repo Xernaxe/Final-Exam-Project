@@ -42,3 +42,18 @@
 .perksIMG_link {
 	right: 0;
 }
+@media (min-width: 1024px){
+	.perksCard {
+		height: clamp(140px, 14vw, 200px);
+		width: clamp(140px, 14vw, 200px);
+	}
+
+	.perksCardsWrapper{
+		gap: 26px;
+		justify-content: center;
+	}
+
+	.perksP{
+		font-size: clamp(1rem, 1.5vw, 1.5rem);
+	}
+}

@@ -32,3 +32,24 @@
 .blogIMG{
   width: 100%;
 }
+
+@media (min-width: 1024px) {
+  .blogP{
+    width: auto;
+    margin: 0 11vw;
+  }
+
+  .blogP2, .blogP3{
+    font-size: 1rem;
+  }
+
+  .blogP1, .blogP4{
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+
+  }
+  
+  .blogIMG{
+    max-height: 540px;
+    margin: 1.5rem 0;
+  }
+}

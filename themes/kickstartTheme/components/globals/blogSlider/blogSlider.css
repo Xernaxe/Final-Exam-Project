@@ -12,3 +12,22 @@
 .blogSliderArrow{
     transform: translateY(-50%);
 }
+
+@media (min-width: 1024px){
+    .blogSliderCard, .blogSliderContent{
+        width: 400px;
+        height: 400px;
+    }
+
+    .blogSliderCard{
+        margin: 0 0.5vw;
+    }
+
+    .reviewSlider{
+        scroll-snap-type: none;
+    }
+
+    .blogCardTitle{
+        margin-bottom: 5%;
+    }
+}

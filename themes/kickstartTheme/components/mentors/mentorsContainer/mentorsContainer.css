@@ -1,3 +1,70 @@
+.mentorsCard {
+	background-color: #ffb277;
+	border-radius: 40px 40px 40px 0;
+	padding: 15px 45px 15px 20px;
+}
+
+
+.mentorsCardWrapper {
+	display: flex;
+	gap: 4%;
+}
+
+.mentorsCardCompany {
+	font-weight: 600;
+}
+
+.mentorsCardSocials {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.mentorsCardA {
+	font-family: 'Mukta';
+	font-weight: 300;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.mentorsCardDesc {
+	font-size: 12px;
+	font-family: 'Mukta';
+	font-weight: 300;
+}
+
+.mentorsCardRight {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.mentorsCardLeft > p {
+	font-size: 14px;
+	font-family: 'Mukta';
+	font-weight: 300;
+}
+
+.mentorsCardA, .mentorsCardCompany, .mentorsCardLeft > p{
+	color: #001438;
+}
+
+
+
+@media (max-width: 375px) {
+	.mentorsCard {
+		padding: 5px 35px 5px 15px;
+	}
+	.mentorsCardCompany {
+		transform: translateY(0px);
+	}
+}
+
+
+
 .mentorsContainer {
 	margin: 0 6vw;
 	display: flex;
@@ -16,6 +83,41 @@
 	margin-bottom: 40px;
 }
 
+.mentorsCardIMG{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
 @media (max-width: 375px) {
 
+}
+
+@media(min-width: 1024px){
+	.mentorsContainerP{
+		font-size: clamp(1rem, 1.5vw, 1.5rem);
+	}
+
+	.mentorsContainer{
+		margin: 0 11vw;
+	}
+
+	.mentorsCard{
+		width: clamp(300px, 34vw, 490px);
+		padding: 15px 24px 15px 20px;
+	}
+
+	.mentorsCards{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 40px 10vw;
+	}
+
+
+
+	.mentorsCardRight > p{
+		color: #001438;
+		font-weight: 300;
+	}
 }

@@ -1,51 +1,86 @@
 .VMP {
 	margin: 0 6vw;
-  font-family: "Mukta";
-  font-size: clamp(1rem, 4.5vw, 1.5rem);
-  font-weight: 300;
-  margin-bottom: 24px;
+	font-family: 'Mukta';
+	font-size: clamp(1rem, 4.5vw, 1.5rem);
+	font-weight: 300;
+	margin-bottom: 24px;
 }
 
-
 .VMCard {
-  border: 1px solid #ff7003;
+	border: 1px solid #ff7003;
 	border-radius: 56px 56px 56px 0;
 	padding: 30px 24px;
 	width: 65%;
-  min-width: 255px;
+	min-width: 255px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  height: 304px;
-  transform: translate(-10%, 2.5%);
-  justify-content: center;
+	height: 304px;
+	transform: translate(-10%, 2.5%);
+	justify-content: center;
 }
 
-
-.VMCard:nth-child(3){
-  transform: translate(10%, -2.5%);
+.VMCard:nth-child(3) {
+	transform: translate(10%, -2.5%);
 }
 
-.homePodcastCard{
-  transform: translate(10%, -2.5%);
-  border: none;
+.homePodcastCard {
+	transform: translate(10%, -2.5%);
+	border: none;
 }
 
 .VMCardH {
-  text-transform: uppercase;
-  color: #ff7003;
-  font-size: 2rem;
-  font-weight: 400;
+	text-transform: uppercase;
+	color: #ff7003;
+	font-size: 2rem;
+	font-weight: 400;
 }
 
 .VMCardP {
-  font-family: "Mukta";
-  font-size: 1rem;
-  font-weight: 200;
+	font-family: 'Mukta';
+	font-size: 1rem;
+	font-weight: 200;
 }
 
 .VMWrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media (min-width: 1024px) {
+	.VMP {
+		margin: 0 11vw;
+		font-size: 1.5rem;
+	}
+
+	.VMCardWrapper {
+		display: flex;
+	}
+
+	.VMCard {
+		width: clamp(405px, 40vw, 576px);
+		border-radius: 40px 40px 40px 0;
+    padding: 43px 63px;
+    height: auto;
+    justify-content: space-around;
+	}
+
+  .VMCardIMG{
+    width: 140px;
+    height: 140px;
+  }
+
+	.VMCard:nth-child(1) {
+		transform: translate(10px, 10px);
+	}
+
+	.VMCard:nth-child(2) {
+		transform: translate(-10px, -10px);
+	}
+
+  .VMCardP{
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
 }

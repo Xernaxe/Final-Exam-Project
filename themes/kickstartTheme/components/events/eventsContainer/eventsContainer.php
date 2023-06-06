@@ -14,13 +14,16 @@
       ?>
         
       <div class="eventsCard">
+        <img src="<?php echo get_theme_file_uri('/images/eventImg.png') ?>" alt="" class="eventsIMG">
         
-        <h2 class="eventsCardName"><?php echo get_field('event_name'); ?></h2>
-        <p class="eventsCardDesc"><?php echo wp_trim_words(get_field('event_content'), 20); ?></p>
-        
-        <div class="eventsDetails">
-          <img class="eventsDetailsIMG" src="<?php echo get_theme_file_uri('/images/dateIcon_O.svg') ?>" alt="">
-          <p class="eventsCardDetailsP"><?php echo get_field('event_date'); ?></p>
+        <div class="eventsDetailsWrapper">
+
+          <h2 class="eventsCardName"><?php echo get_field('event_name'); ?></h2>
+          <p class="eventsCardDesc"><?php echo wp_trim_words(get_field('event_content'), 20); ?></p>
+          
+          <div class="eventsDetails">
+            <img class="eventsDetailsIMG" src="<?php echo get_theme_file_uri('/images/dateIcon_O.svg') ?>" alt="">
+            <p class="eventsCardDetailsP"><?php echo get_field('event_date'); ?></p>
         </div>
         
         <div class="eventsDetails">
@@ -29,12 +32,13 @@
         </div>
         
         <div class="eventsButtons">
-          <a class="eventsReadMoreBtn" href="<?php the_permalink() ?>">READ MORE <img src="<?php echo get_theme_file_uri('/images/rightArrow_W.svg') ?>" alt=""></a>
           <a class="eventsBuyBtn" href="<?php echo get_field('event_stripe') ?>" >BUY A TICKET <img src="<?php echo get_theme_file_uri('/images/rightArrow_W.svg') ?>" alt=""></a>
+          <a class="eventsReadMoreBtn" href="<?php the_permalink() ?>">READ MORE <img src="<?php echo get_theme_file_uri('/images/rightArrow_O.svg') ?>" alt=""></a>
         </div>
-      
       </div>
-    <?php
+        
+      </div>
+      <?php
     }
     wp_reset_postdata();
   }

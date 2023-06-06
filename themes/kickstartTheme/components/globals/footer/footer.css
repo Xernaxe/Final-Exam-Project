@@ -48,3 +48,56 @@
 .infoP{
   color: #001438;
 }
+
+.infoPDesktop{
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .footerMobile{
+    height: 417px;
+  }
+  .footerDesktopWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 2%;
+  }
+
+  .footerLogo{
+    order: 2;
+    margin: auto auto;
+    width: auto;
+  }
+
+  .footerInfo{
+    order: 3;
+    gap: 20px;
+  }
+
+  .footerWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+    height: 100%;
+  }
+
+  .footerInfo{
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .infoP{
+    display: none;
+  }
+
+  .infoPDesktop{
+    display: inline;
+    color: #001438;
+  }
+
+  .infoH{
+    margin: 0;
+  }
+}

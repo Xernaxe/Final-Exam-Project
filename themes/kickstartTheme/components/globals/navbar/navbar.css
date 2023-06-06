@@ -5,9 +5,35 @@
 	padding: 20px 20px 20px 20px;
 	background-color: #b1c1e0;
 }
-@media (min-width: 426px) {
+
+.navDesktop{
+	display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    background-color: #b1c1e0;
+}
+
+.navDesktopUL{
+	display: flex;
+    font-size: 1.5rem;
+}
+
+.navDesktopLI{
+	text-transform: uppercase;
+	margin: 10px;
+}
+
+.navDesktopLI > a {
+	color: #001438;
+}
+
+@media (min-width: 1024px) {
 	.navMobile {
 		display: none;
+	}
+	.navDesktop{
+		display: flex;
 	}
 }
 
@@ -27,7 +53,7 @@
 	z-index: 20;
 }
 .mobileLogo {
-	width: 40vw;
+	width: clamp(136px, 40vw, 200px);
 }
 
 .burgerMenu {
