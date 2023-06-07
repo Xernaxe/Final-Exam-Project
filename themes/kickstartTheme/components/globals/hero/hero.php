@@ -39,49 +39,41 @@ switch ($pageHeader) {
     <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroIMG.png') ?>" alt="Hero Img">
 
     <?php
-if (get_the_title() == "Podcast") {
-  ?>
-  <div class="heroPodcastWrapper">
-    <h3 class="heroPodcastH3"></h3>
-    <h1 class="heroPodcastH1">Listen to learn</h1>
-    <h2 class="heroPodcastH2"></h2>
+    if (get_the_title() == "Podcast") {
+      ?>
+      <div class="heroPodcastWrapper">
+        <h3 class="heroPodcastH3"></h3>
+        <h1 class="heroPodcastH1">Listen to learn</h1>
+        <h2 class="heroPodcastH2"></h2>
 
-    <div class="heroPodcastPlayer">
-      <audio class="heroAudio" controls>
-        <source class="heroSource" type="audio/mpeg">
-      </audio>
-    </div>
+        <div class="heroPodcastPlayer">
+          <audio class="heroAudio" controls>
+            <source class="heroSource" type="audio/mpeg">
+          </audio>
+        </div>
 
-    <p class="heroPodcastP"></p>
+        <p class="heroPodcastP"></p>
 
-    <a class="podcastCardSpotifyBtn">
-        Listen to on Spotify
-    </a>
-  </div>
-  <?php
-} else {
-  // Check if the current post is a child of the events page
-  $current_post = get_post();
-  $events_page = get_page_by_path('events');
-  $is_child_of_events = ($current_post->post_parent === $events_page->ID);
+        <a class="podcastCardSpotifyBtn">
+            Listen to on Spotify
+        </a>
+      </div>
+      <?php
+    } elseif (has_category('events', get_the_ID())){
+      ?>
+      <div class="eventHeroDetails">
+        <h1 class="eventHeroH"><?php echo $pageHeader ?></h1>
+        <p class="eventDate">17th of May</p>
+        <p class="eventLocation">Aalborg University</p>
+      </div>
+      <?php
+    } else {
+      ?>
+        <h1 class="heroH"><?php echo $pageHeader ?></h1>
 
-  if ($is_child_of_events) {
+      <?php
+    }
     ?>
-    <div class="eventHeroDetails">
-      <h1 class="eventHeroH"><?php echo $pageHeader ?></h1>
-      <p class="eventDate">17th of May</p>
-      <p class="eventLocation">Aalborg University</p>
-    </div>
-    <?php
-  } else {
-    ?>
-    <h1 class="heroH"><?php echo $pageHeader ?></h1>
-    <?php
-  }
-}
-?>
-
-
 
 
   </div>

@@ -11,9 +11,29 @@
 	z-index: 1;
 }
 
+.eventHeroDetails {
+	position: absolute;
+	z-index: 3;
+	bottom: 20%;
+	padding: 0 6vw;
+}
+
 .heroWrapper {
 	position: relative;
 	max-height: 612px;
+}
+
+.eventHeroH {
+	text-transform: uppercase;
+	color: #ff7003;
+	font-size: clamp(1.5rem, 11vw, 3rem);
+	font-weight: 400;
+}
+.eventDate,
+.eventLocation {
+	font-size: clamp(1rem, 5vw, 2rem);
+	font-family: 'Mukta';
+	font-weight: 200;
 }
 
 .hero {
@@ -61,10 +81,10 @@
 	font-weight: 400;
 }
 
-.heroPodcastH3{
+.heroPodcastH3 {
 	text-transform: uppercase;
 	font-size: 1rem;
-	margin-left: .3vw;
+	margin-left: 0.3vw;
 	color: #001438;
 	font-weight: 400;
 }
@@ -92,6 +112,15 @@
 		top: clamp(1%, 2vw, 15%);
 	}
 
+	.eventDate,
+	.eventLocation {
+		font-size: 1.2rem;
+	}
+
+	.eventHeroDetails {
+		padding: 0 11vw;
+	}
+
 	.heroWrapper,
 	.hero,
 	.heroIMG {
@@ -112,7 +141,7 @@
 		display: block;
 	}
 
-	.heroAudio{
+	.heroAudio {
 		margin: 10px 0 20px 0;
 	}
 }

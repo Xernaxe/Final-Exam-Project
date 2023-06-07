@@ -60,3 +60,14 @@ article {
 .navDesktopLI > a:hover {
 	color: #ff7003;
 }
+
+
+@media (min-width: 1024px) {
+	section, article{
+		padding: 0 0 104px 0;
+	}
+
+	.sectionH{
+		margin: 0 56px 56px 56px
+	}
+}
