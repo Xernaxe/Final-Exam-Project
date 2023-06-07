@@ -15,7 +15,10 @@
             ?>
               <div class="podcastCard ">
                 
-                <img src="<?php echo get_theme_file_uri('images/podcastImg.png') ?>" alt="" class="podcastCardIMG">
+                <div class="podcastCardIMGWrapper">
+                  <img src="<?php echo get_theme_file_uri('images/podcastImg.png') ?>" alt="" class="podcastCardIMG">
+                  <img src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="" class="podcastCardPlayDesktop">
+                </div>
                 <div class="podcastCardWrapper">
 
                   
@@ -24,9 +27,16 @@
                   
                   
                   <div class="podcastCardDetails">
-                    <div class="podcastCardTime">
-                      <img class="podcastCardTimeIcon" src="<?php echo get_theme_file_uri('images/timeIcon_O.svg') ?>" alt="Length">
-                      <p class="podcastCardTimeP">22.13 min.</p>
+                    <div class="podcastCardTimeWrapper">
+
+                      <div class="podcastCardTime">
+                        <img class="podcastCardTimeIcon" src="<?php echo get_theme_file_uri('images/timeIcon_O.svg') ?>" alt="Length">
+                        <p class="podcastCardTimeP">22.13 min.</p>
+                      </div>
+                      <div class="podcastCardTime">
+                        <img class="podcastCardTimeIcon" src="<?php echo get_theme_file_uri('images/dateIcon_O.svg') ?>" alt="Length">
+                        <p class="podcastCardTimeP podcastCardDate">05/09/2021</p>
+                      </div>
                     </div>
                     <audio class="podcastCardAudio" src="<?php echo get_field('podcast_audio')?>"></audio>
                     <img class="podcastCardPlay" src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="Play">

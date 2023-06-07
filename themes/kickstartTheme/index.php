@@ -9,6 +9,7 @@
   get_template_part('components/home/homeDepartments/homeDepartments');
   get_template_part('components/home/homePodcast/homePodcast');
   get_template_part('components/home/homeBlogSlider/homeBlogSlider');
+  // get_template_part('components/globals/blogSliderDesktop/blogSliderDesktop');
   get_template_part('components/globals/backToTopButton/backToTopButton');
   
 

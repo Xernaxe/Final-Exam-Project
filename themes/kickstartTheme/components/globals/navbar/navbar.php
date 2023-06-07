@@ -25,11 +25,11 @@
 	</a>
 	
 		<ul class="navDesktopUL">
-			<li class="navDesktopLI"><a href="<?php echo site_url('/events') ?>">Events</a></li>
-			<li class="navDesktopLI"><a href="<?php echo site_url('/podcast') ?>">Podcast</a></li>
-			<li class="navDesktopLI"><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
-			<li class="navDesktopLI"><a href="<?php echo site_url('/mentors') ?>">Mentors</a></li>
-			<li class="navDesktopLI"><a href="<?php echo site_url('/volunteer') ?>">Volunteering</a></li>
-			<li class="navDesktopLI"><a href="<?php echo site_url('/crew') ?>">Crew</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('events') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/events')  ?>">Events</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('podcast') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/podcast') ?>">Podcast</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('blog') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/blog') ?>">Blog</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('mentors') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/mentors') ?>">Mentors</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('volunteer') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/volunteer') ?>">Volunteering</a></li>
+			<li class="navDesktopLI"><a class="<?php echo is_page('crew') ? 'navLIActive' : '' ?>" href="<?php echo site_url('/crew') ?>">Crew</a></li>
 		</ul>
 </nav>

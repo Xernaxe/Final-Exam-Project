@@ -24,6 +24,10 @@
 	transform: translate(10%, -2.5%);
 }
 
+.VMCard:nth-child(2) {
+	transform: translate(10%, -2.5%);
+}
+
 .homePodcastCard {
 	transform: translate(10%, -2.5%);
 	border: none;
@@ -47,6 +51,11 @@
 	flex-direction: column;
 	align-items: center;
 }
+.VMCardWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 @media (min-width: 1024px) {
 	.VMP {
@@ -56,20 +65,22 @@
 
 	.VMCardWrapper {
 		display: flex;
+		flex-direction: row;
+		align-items: normal;
 	}
 
 	.VMCard {
 		width: clamp(405px, 40vw, 576px);
 		border-radius: 40px 40px 40px 0;
-    padding: 43px 63px;
-    height: auto;
-    justify-content: space-around;
+		padding: 43px 63px;
+		height: auto;
+		justify-content: space-around;
 	}
 
-  .VMCardIMG{
-    width: 140px;
-    height: 140px;
-  }
+	.VMCardIMG {
+		width: 140px;
+		height: 140px;
+	}
 
 	.VMCard:nth-child(1) {
 		transform: translate(10px, 10px);
@@ -79,8 +90,8 @@
 		transform: translate(-10px, -10px);
 	}
 
-  .VMCardP{
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
+	.VMCardP {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
 }

@@ -13,7 +13,7 @@ reviewSlider.addEventListener('scroll', updateSliderPos);
 
 function scrollReviewSliderBack() {
 	sliderPos--;
-	arrowBack.classList.toggle('hide', sliderPos <= 1); //adds  
+	arrowBack.classList.toggle('hide', sliderPos <= 1); //adds
 	arrowNext.classList.remove('hide');
 	reviewSlider.scrollBy({
 		left: -reviewSliderWidth,

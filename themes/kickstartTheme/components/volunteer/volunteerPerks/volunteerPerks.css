@@ -51,6 +51,7 @@
 	.perksCardsWrapper{
 		gap: 26px;
 		justify-content: center;
+		overflow-x: hidden;
 	}
 
 	.perksP{

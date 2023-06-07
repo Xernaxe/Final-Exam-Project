@@ -23,8 +23,9 @@
         margin: 0 0.5vw;
     }
 
-    .reviewSlider{
+    .blogSlider{
         scroll-snap-type: none;
+        
     }
 
     .blogCardTitle{

@@ -18,3 +18,24 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (min-width: 1024px) {
+    .contactUsButton{
+      display: flex;
+      background-color: #ff7003;
+      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 32px 32px 32px 0;
+      padding: 0 34px;
+      width: clamp(412px, 34vw, 481px);
+      margin: 0 11vw;
+      text-transform: uppercase;
+      gap: 5%;
+      font-family: "Mukta";
+    }
+    
+    .contactUsButtonWrapper{
+      justify-content: flex-end;
+    }
+  }

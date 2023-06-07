@@ -40,8 +40,8 @@
                 
                 <div class="mentorsCardRight">
                   <h3 class="mentorsCardCompany"><?php echo get_field('mentors_name')?></h3>
-                  <p class="mentorsCardName"><?php echo get_field('mentors_company')?></p>
-                  <p class="mentorsCardTitle"><?php echo get_field('mentors_position')?></p>
+                  <p class="mentorsCardName" style="color: #001438;"><?php echo get_field('mentors_company')?></p>
+                  <p class="mentorsCardTitle" style="color: #001438;"><?php echo get_field('mentors_position')?></p>
 
                   <div class="mentorsCardSocials">
                     <a class="mentorsCardA" href="<?php echo get_field('mentors_linkedInLink')?>"><?php echo get_field('mentors_name')?><img style="width:24px" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt=""></a>

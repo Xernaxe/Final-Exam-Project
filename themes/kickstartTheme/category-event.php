@@ -49,14 +49,16 @@ while (have_posts()) {
 
         <div class="eventScheduleCard">
             <h2 class="eventScheduleH">Program</h2>
-            <?php $schedule = get_field('event_schedule');
+            <div class="eventScheduleWrapper">
+                <img class="eventScheduleIMG" src="<?php echo get_theme_file_uri('/images/eventImg.png') ?>" alt="">
+                <?php $schedule = get_field('event_schedule');
                 if ($schedule){?>
             <ul>
                 <?php $time_brackets = explode(";", $schedule);
                     foreach ($time_brackets as $time_bracket) {
-                    $parts = explode('=', $time_bracket, 2);
-                    $start_time = $parts[0];
-                    $presentation = $parts[1];?>
+                        $parts = explode('=', $time_bracket, 2);
+                        $start_time = $parts[0];
+                        $presentation = $parts[1];?>
                 <li class="eventScheduleLI">
                     <p class="eventScheduleTime">
                         <?php echo $start_time; ?>
@@ -69,6 +71,7 @@ while (have_posts()) {
                 }?>
             </ul>
             <?php } ?>
+        </div>
 
         </div>
 

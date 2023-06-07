@@ -28,6 +28,15 @@
 	color: #001438;
 }
 
+.navDesktopLI > a:hover{
+	color: #ff7003;
+}
+
+
+.navLIActive{
+	color: #ff7003!important;
+}
+
 @media (min-width: 1024px) {
 	.navMobile {
 		display: none;

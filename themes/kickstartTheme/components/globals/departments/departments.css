@@ -9,6 +9,11 @@
 	align-items: center;
 	flex-direction: column;
 	margin: auto;
+	cursor: pointer;
+}
+
+.departmentsCard:hover{
+	background-color: #4a5e848e;
 }
 
 .departmentsIMG {
@@ -82,6 +87,7 @@
 .departmentsPopupSubH{
 	font-size: clamp(1rem, 4.5vw, 1.5rem);
 	color: #ff7003;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
@@ -98,14 +104,18 @@
 	.departmentsCard {
 		width: clamp(155px, 15vw, 216px);
 		height: clamp(155px, 15vw, 216px);
-		background-color: #4a5e84;
 		justify-content: center;
 		gap: 5%;
+	}
+	
+	.departmentsActiveCard{
+		background-color: #4a5e84!important;
 	}
 
 	.departmentsIMG {
 		width: clamp(75px, 7vw, 90px);
 	}
+
 
 	.departmentsArrow {
 		display: none;
@@ -121,14 +131,16 @@
 		display: none;
 	}
 
+	
+	.departmentsPopup {
+		display: none;
+	}
 	.departmentsPopupDesktop {
 		display: flex;
-	}
-
-	.departmentsPopup {
-		margin: 0 11vw;
+		margin: 0 auto;
 		padding: 68px 68px 68px 0;
 		gap: 3%;
+		width: clamp(800px,79vw,1125px);
 	}
 
 	.departmentsPopupH {
@@ -140,7 +152,7 @@
 		margin: 5% 0;
 	}
 
-	.departmentsPopupIMG {
+	.departmentsPopupIMGDesktop {
 		position: initial;
 		min-width: 160px;
 		max-width: 196px;

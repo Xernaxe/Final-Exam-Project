@@ -5,7 +5,7 @@
 }
 
 .eventsContainer{
-  margin: 0 6vw;
+  margin: 1vw 6vw;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -67,7 +67,7 @@
   display: none;
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
   .eventsButtons{
     flex-direction: column;
     gap: 10px;

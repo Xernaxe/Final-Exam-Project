@@ -35,34 +35,54 @@ switch ($pageHeader) {
   <div class="heroWrapper">
 
     <div class="heroOverlay"></div>
-    <img class="heroIMGMobile" src="<?php echo get_theme_file_uri('/images/heroimg.png') ?>" alt="Hero Img">
-    <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroimg.png') ?>" alt="Hero Img">
+    <img class="heroIMGMobile" src="<?php echo get_theme_file_uri('/images/heroIMG.png') ?>" alt="Hero Img">
+    <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroIMG.png') ?>" alt="Hero Img">
 
     <?php
-    if (get_the_title() == "Podcast") {
-      ?>
-      <div class="heroPodcastWrapper">
+if (get_the_title() == "Podcast") {
+  ?>
+  <div class="heroPodcastWrapper">
+    <h3 class="heroPodcastH3"></h3>
+    <h1 class="heroPodcastH1">Listen to learn</h1>
+    <h2 class="heroPodcastH2"></h2>
 
-        <h1 class="heroPodcastH1">Listen to learn</h1>
-        <h2 class="heroPodcastH2"></h2>
+    <div class="heroPodcastPlayer">
+      <audio class="heroAudio" controls>
+        <source class="heroSource" type="audio/mpeg">
+      </audio>
+    </div>
 
-        <div class="heroPodcastPlayer">
-          <audio class="heroAudio" controls>
-            <source class="heroSource" type="audio/mpeg">
-          </audio>
-        </div>
+    <p class="heroPodcastP"></p>
 
-        <p class="heroPodcastP"></p>
+    <a class="podcastCardSpotifyBtn">
+        Listen to on Spotify
+    </a>
+  </div>
+  <?php
+} else {
+  // Check if the current post is a child of the events page
+  $current_post = get_post();
+  $events_page = get_page_by_path('events');
+  $is_child_of_events = ($current_post->post_parent === $events_page->ID);
 
-        <a class="podcastCardSpotifyBtn">
-            Listen to on Spotify
-        </a>
-      </div>
-      <?php
-    }
+  if ($is_child_of_events) {
     ?>
-
+    <div class="eventHeroDetails">
+      <h1 class="eventHeroH"><?php echo $pageHeader ?></h1>
+      <p class="eventDate">17th of May</p>
+      <p class="eventLocation">Aalborg University</p>
+    </div>
+    <?php
+  } else {
+    ?>
     <h1 class="heroH"><?php echo $pageHeader ?></h1>
+    <?php
+  }
+}
+?>
+
+
+
 
   </div>
 </section>
@@ -89,13 +109,15 @@ function manageAudioPlayer(audioSrc, playAudioSignal) {
   audioPlayer.volume = 0.1;
 }
 
-function changeHeroContent(cardH, cardP, audioSrc, playAudioSignal) {
+function changeHeroContent(cardH, cardP, cardDate, audioSrc, playAudioSignal) {
   let heroPodcastH2 = document.querySelector('.heroPodcastH2');
   let heroPodcastP = document.querySelector('.heroPodcastP');
+  let heroPodcastH3 = document.querySelector('.heroPodcastH3');
   
 
   heroPodcastH2.textContent = cardH;
   heroPodcastP.textContent = cardP;
+  heroPodcastH3.textContent = cardDate;
 
   manageAudioPlayer(audioSrc, playAudioSignal)
   
@@ -105,16 +127,19 @@ document.addEventListener('DOMContentLoaded', function() {
   let podcastCards = document.querySelectorAll('.podcastCard');
   let firstCardH = podcastCards[0].querySelector('.podcastCardH').textContent;
   let firstCardP = podcastCards[0].querySelector('.podcastCardP').dataset.podcast_description;
+  let firstCardDate = podcastCards[0].querySelector('.podcastCardDate').textContent;
   let firstCardAudio = podcastCards[0].querySelector('.podcastCardAudio').src;
   podcastCards[0].classList.add('podcastCurrentlyPlaying')
   let audioIsPlaying = false;
 
-  changeHeroContent(firstCardH, firstCardP, firstCardAudio);
+  changeHeroContent(firstCardH, firstCardP, firstCardDate, firstCardAudio);
 
   podcastCards.forEach(function(card) {
     let playButton = card.querySelector('.podcastCardPlay');
+    let playButtonDesktop = card.querySelector('.podcastCardPlayDesktop')
     let title = card.querySelector('.podcastCardH').textContent;
     let desc = card.querySelector('.podcastCardP').dataset.podcast_description;
+    let date = card.querySelector('.podcastCardDate').textContent;
     let audioSrc = card.querySelector('.podcastCardAudio').src;
 
     card.addEventListener('click', () => {
@@ -123,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       card.classList.add('podcastCurrentlyPlaying')
 
-      changeHeroContent(title, desc, audioSrc, false);
+      changeHeroContent(title, desc, date, audioSrc, false);
 
       window.scrollTo({
         top: 0,
@@ -132,19 +157,66 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
     playButton.addEventListener('click', function(e) {
-      e.stopPropagation(); // TO not get triggered twice by the even propagation chain in DOM node
+      e.stopPropagation();
 
       podcastCards.forEach(card2 => {
         card2.classList.remove('podcastCurrentlyPlaying');
       });
       card.classList.add('podcastCurrentlyPlaying');
 
-      if (audioIsPlaying) {
-        changeHeroContent(title, desc, audioSrc, false);
-        audioIsPlaying = false;
+      let isCurrentlyPlaying = card.classList.contains('podcastCurrentlyPlaying');
+
+      podcastCards.forEach(card2 => {
+        let playButton = card2.querySelector('.podcastCardPlayDesktop');
+        let audioSrc = card2.querySelector('.podcastCardAudio').src;
+
+        if (card2 !== card) {
+          playButton.classList.remove('podcastPlaying');
+          manageAudioPlayer(audioSrc, false);
+        }
+      });
+
+      if (isCurrentlyPlaying) {
+        playButtonDesktop.classList.add('podcastPlaying');
+        changeHeroContent(title, desc, date, audioSrc, true);
       } else {
-        changeHeroContent(title, desc, audioSrc, true);
-        audioIsPlaying = true;
+        playButtonDesktop.classList.remove('podcastPlaying');
+        changeHeroContent(title, desc, date, audioSrc, false);
+      }
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+    playButtonDesktop.addEventListener('click', function(e) {
+      e.stopPropagation();
+
+      podcastCards.forEach(card2 => {
+        card2.classList.remove('podcastCurrentlyPlaying');
+      });
+      card.classList.add('podcastCurrentlyPlaying');
+
+      let isCurrentlyPlaying = card.classList.contains('podcastCurrentlyPlaying');
+
+      podcastCards.forEach(card2 => {
+        let playButton = card2.querySelector('.podcastCardPlayDesktop');
+        let audioSrc = card2.querySelector('.podcastCardAudio').src;
+
+        if (card2 !== card) {
+          playButton.classList.remove('podcastPlaying');
+          manageAudioPlayer(audioSrc, false);
+        }
+      });
+
+      if (isCurrentlyPlaying) {
+        playButtonDesktop.classList.add('podcastPlaying');
+        changeHeroContent(title, desc, date, audioSrc, true);
+      } else {
+        playButtonDesktop.classList.remove('podcastPlaying');
+        changeHeroContent(title, desc, date, audioSrc, false);
       }
 
       window.scrollTo({

@@ -58,6 +58,8 @@ while (have_posts()) {
 <section class="innerBlogSlider">
     <h2 class="sectionH">Similar Articles</h2>
     <?php  get_template_part('components/globals/blogSlider/blogSlider');?>
+    <?php  get_template_part('components/globals/blogSliderDesktop/blogSliderDesktop');?>
+
 </section>
 <?php get_template_part('components/globals/backToTopButton/backToTopButton'); ?>
 </main>

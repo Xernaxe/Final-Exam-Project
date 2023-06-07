@@ -41,6 +41,7 @@
 	right: 0;
 	padding: 50px 20px;
 	z-index: 3;
+	cursor: pointer;
 }
 
 .reviewCardArrow_back {
@@ -69,6 +70,7 @@
   width: 196px;
   height: 196px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .reviewIMG {
@@ -81,4 +83,27 @@
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	width: 100%;
+}
+
+@media (min-width: 1024px){
+	.reviewCard{
+		width: clamp(330px,31vw,440px);
+		margin: 0 1%;
+	}
+
+	.reviewSlider{
+		padding-top: 11.5%!important;
+	}
+
+	.reviewCardArrow{
+		transform: translate(0%, -5%);
+	}
+
+	.reviewWrapper{
+		/* display: none; */
+		z-index: 1;
+	}
+	.reviewWrapperMobile{
+		display: none;
+	}
 }

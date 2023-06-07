@@ -23,3 +23,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (min-width: 1024px) {
+  .becomeP{
+    margin: 0 11vw 20px 11vw;
+    width: auto;
+  }
+
+  
+}

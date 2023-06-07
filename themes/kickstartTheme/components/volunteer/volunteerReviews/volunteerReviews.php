@@ -8,17 +8,19 @@
     'posts_per_page' => -1,
     'category_name' => 'review'
 ));
+
+  $nrOfPosts = count($postsReviews)
 ?>
 
 <div class="reviewWrapper">
   <img class="reviewCardArrow reviewCardArrow_back hide" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Back">
-  <img class="reviewCardArrow reviewCardArrow_next" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Next">
+  <img class="reviewCardArrow reviewCardArrow_next <?php echo $nrOfPosts <= 3 ? 'hide' : '' ?>" src="<?php echo get_theme_file_uri("/images/reviewArrow.svg") ?>" alt="Next">
   
   <?php
   if($postsReviews){
     $postsCount = count($postsReviews);
     ?>
-    <div class="reviewSlider" style="padding-top:32%" data-posts_count="<?php echo $postsCount ?>">
+    <div class="reviewSlider" style="padding-top:32%; <?php echo $nrOfPosts <= 3 ? 'overflow-x: hidden; justify-content: center;' : '' ?>" data-posts_count="<?php echo $postsCount ?>">
     <?php
     foreach($postsReviews as $post) {
       setup_postdata($post);
