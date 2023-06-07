@@ -99,7 +99,18 @@
         </div>
             
         </div>
-
+        <div class="departmentsPopup departmentsPopupDesktop">
+                <img class="departmentsPopupIMG" src="<?php echo get_theme_file_uri('/images/marketing_O.svg') ?>" alt="">
+                <div class="departmentsPopupWrapper">
+                    <h4 class="departmentsPopupH">Marketing department</h4>
+                    <h5 class="departmentsPopupSubH">Open Position</h5>
+                    <p class="departmentsPopupP">In marketing you are able to develop yourself in social media, data
+                        oriented from previous events, partially business plans, etc.
+                        If you would have other volunteer proposals within the marketing field do not hesitate to contact
+                        us.</p>
+                        <a class="departmentsPopupBtnDesktop" href="">Become a Volunteer <img src="<?php echo get_theme_file_uri('images/buttonArrow_W.svg') ?>" alt=""></a>
+                    </div>
+            </div>
         <script>
 
 const departmentCardsWrappers = document.querySelectorAll(".departmentsCardWrapper");

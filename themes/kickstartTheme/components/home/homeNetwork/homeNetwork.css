@@ -1,9 +1,5 @@
-.homeNetworkCard {
-  background-image: url(../../../images/hnPic.png);
-  border: none;
-  z-index: 1;
-  background-repeat: no-repeat;
-  transform: translate(-10%, 10%);
+.homeEventCardWrapper{
+  margin: 0 11vw;
 }
 
 .homeNetworkH{

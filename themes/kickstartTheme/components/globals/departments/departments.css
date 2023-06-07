@@ -34,12 +34,12 @@
 }
 
 .departmentsPopup {
-    background-color: #4a5e84;
-    border-radius: 30px;
-    padding: 20px 5%;
-    position: relative;
-    margin: 24px;
-    margin-top: 15px;
+	background-color: #4a5e84;
+	border-radius: 30px;
+	padding: 20px 5%;
+	position: relative;
+	margin: 24px;
+	margin-top: 15px;
 }
 
 .departmentsPopupIMG {
@@ -57,15 +57,14 @@
 	font-family: 'Mukta';
 	font-size: clamp(1rem, 4.5vw, 1.5rem);
 	margin-bottom: 10%;
-
 }
 
 .departmentsPopupH {
-    font-size: clamp(1.5rem, 8vw, 3rem);
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffb277;
-    margin: 25% 0 10% 0;
+	font-size: clamp(1.5rem, 8vw, 3rem);
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffb277;
+	margin: 25% 0 10% 0;
 }
 
 .departmentsArrow {
@@ -76,7 +75,91 @@
 	rotate: 180deg;
 }
 
+.departmentsPopupDesktop {
+	display: none;
+}
 
-@media (max-width: 375px){
+.departmentsPopupSubH{
+	font-size: clamp(1rem, 4.5vw, 1.5rem);
+	color: #ff7003;
+	text-transform: uppercase;
+}
 
+@media (max-width: 375px) {
+}
+
+@media (min-width: 1024px) {
+	.departmentsCardsWrapper {
+		justify-content: center;
+		flex-direction: row;
+		gap: 15px;
+	}
+
+	.departmentsCard {
+		width: clamp(155px, 15vw, 216px);
+		height: clamp(155px, 15vw, 216px);
+		background-color: #4a5e84;
+		justify-content: center;
+		gap: 5%;
+	}
+
+	.departmentsIMG {
+		width: clamp(75px, 7vw, 90px);
+	}
+
+	.departmentsArrow {
+		display: none;
+	}
+
+	.departmentsP {
+		margin: 0;
+		font-size: clamp(1rem, 1.7vw, 1.5rem);
+		width: 60%;
+	}
+
+	.homeDepartmentsButton {
+		display: none;
+	}
+
+	.departmentsPopupDesktop {
+		display: flex;
+	}
+
+	.departmentsPopup {
+		margin: 0 11vw;
+		padding: 68px 68px 68px 0;
+		gap: 3%;
+	}
+
+	.departmentsPopupH {
+		margin: 0;
+		line-height: 3vw;
+	}
+
+	.departmentsPopupP{
+		margin: 5% 0;
+	}
+
+	.departmentsPopupIMG {
+		position: initial;
+		min-width: 160px;
+		max-width: 196px;
+		width: 36vw;
+	}
+
+	.departmentsPopupBtnDesktop {
+		display: flex;
+		background-color: #ff7003;
+		font-size: 2rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 32px 32px 32px 0;
+		padding: 0 34px;
+		width: clamp(412px, 34vw, 481px);
+		margin-right: 0;
+		margin-left: auto;
+		text-transform: uppercase;
+		gap: 5%;
+		font-family: "Mukta";
+	}
 }
