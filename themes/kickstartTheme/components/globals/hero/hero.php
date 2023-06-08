@@ -22,7 +22,10 @@ switch ($pageHeader) {
         $pageHeader = 'Our Blogs';
         break;
     default:
-        if (is_singular()) {
+        if(is_page_template('templates/template-home.php')) {
+            $pageHeader = 'Welcome to Kickstart Aalborg & enjoy';
+        }
+        elseif (is_singular()) {
             $pageHeader = get_the_title();
         } else {
             $pageHeader = 'Welcome to Kickstart Aalborg & enjoy';
@@ -54,12 +57,12 @@ switch ($pageHeader) {
 
         <p class="heroPodcastP"></p>
 
-        <a class="podcastCardSpotifyBtn">
+        <a class="podcastCardSpotifyBtn heroSpotifyBtn">
             Listen to on Spotify
         </a>
       </div>
       <?php
-    } elseif (has_category('events', get_the_ID())){
+    } elseif (has_category('events', get_the_ID()) || has_category('blog', get_the_ID())){
       ?>
       <div class="eventHeroDetails">
         <h1 class="eventHeroH"><?php echo $pageHeader ?></h1>
@@ -78,149 +81,3 @@ switch ($pageHeader) {
 
   </div>
 </section>
-
-<script>
-
-function manageAudioPlayer(audioSrc, playAudioSignal) {
-  let audioPlayer = document.querySelector('.heroAudio');
-  let source = document.querySelector('.heroSource');
-
-  audioPlayer.oncanplaythrough = () => {
-    if (playAudioSignal && audioPlayer.paused) {
-      audioPlayer.play();
-    } else if (!playAudioSignal && !audioPlayer.paused) {
-      audioPlayer.pause();
-    }
-  };
-
-  if (audioPlayer.src !== audioSrc) {
-    source.src = audioSrc;
-    audioPlayer.load();
-  }
-
-  audioPlayer.volume = 0.1;
-}
-
-function changeHeroContent(cardH, cardP, cardDate, audioSrc, playAudioSignal) {
-  let heroPodcastH2 = document.querySelector('.heroPodcastH2');
-  let heroPodcastP = document.querySelector('.heroPodcastP');
-  let heroPodcastH3 = document.querySelector('.heroPodcastH3');
-  
-
-  heroPodcastH2.textContent = cardH;
-  heroPodcastP.textContent = cardP;
-  heroPodcastH3.textContent = cardDate;
-
-  manageAudioPlayer(audioSrc, playAudioSignal)
-  
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  let podcastCards = document.querySelectorAll('.podcastCard');
-  let firstCardH = podcastCards[0].querySelector('.podcastCardH').textContent;
-  let firstCardP = podcastCards[0].querySelector('.podcastCardP').dataset.podcast_description;
-  let firstCardDate = podcastCards[0].querySelector('.podcastCardDate').textContent;
-  let firstCardAudio = podcastCards[0].querySelector('.podcastCardAudio').src;
-  podcastCards[0].classList.add('podcastCurrentlyPlaying')
-  let audioIsPlaying = false;
-
-  changeHeroContent(firstCardH, firstCardP, firstCardDate, firstCardAudio);
-
-  podcastCards.forEach(function(card) {
-    let playButton = card.querySelector('.podcastCardPlay');
-    let playButtonDesktop = card.querySelector('.podcastCardPlayDesktop')
-    let title = card.querySelector('.podcastCardH').textContent;
-    let desc = card.querySelector('.podcastCardP').dataset.podcast_description;
-    let date = card.querySelector('.podcastCardDate').textContent;
-    let audioSrc = card.querySelector('.podcastCardAudio').src;
-
-    card.addEventListener('click', () => {
-      podcastCards.forEach(card2 => {
-        card2.classList.remove('podcastCurrentlyPlaying')
-      })
-      card.classList.add('podcastCurrentlyPlaying')
-
-      changeHeroContent(title, desc, date, audioSrc, false);
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    })
-    
-    playButton.addEventListener('click', function(e) {
-      e.stopPropagation();
-
-      podcastCards.forEach(card2 => {
-        card2.classList.remove('podcastCurrentlyPlaying');
-      });
-      card.classList.add('podcastCurrentlyPlaying');
-
-      let isCurrentlyPlaying = card.classList.contains('podcastCurrentlyPlaying');
-
-      podcastCards.forEach(card2 => {
-        let playButton = card2.querySelector('.podcastCardPlayDesktop');
-        let audioSrc = card2.querySelector('.podcastCardAudio').src;
-
-        if (card2 !== card) {
-          playButton.classList.remove('podcastPlaying');
-          manageAudioPlayer(audioSrc, false);
-        }
-      });
-
-      if (isCurrentlyPlaying) {
-        playButtonDesktop.classList.add('podcastPlaying');
-        changeHeroContent(title, desc, date, audioSrc, true);
-      } else {
-        playButtonDesktop.classList.remove('podcastPlaying');
-        changeHeroContent(title, desc, date, audioSrc, false);
-      }
-
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-
-    playButtonDesktop.addEventListener('click', function(e) {
-      e.stopPropagation();
-
-      podcastCards.forEach(card2 => {
-        card2.classList.remove('podcastCurrentlyPlaying');
-      });
-      card.classList.add('podcastCurrentlyPlaying');
-
-      let isCurrentlyPlaying = card.classList.contains('podcastCurrentlyPlaying');
-
-      podcastCards.forEach(card2 => {
-        let playButton = card2.querySelector('.podcastCardPlayDesktop');
-        let audioSrc = card2.querySelector('.podcastCardAudio').src;
-
-        if (card2 !== card) {
-          playButton.classList.remove('podcastPlaying');
-          manageAudioPlayer(audioSrc, false);
-        }
-      });
-
-      if (isCurrentlyPlaying) {
-        playButtonDesktop.classList.add('podcastPlaying');
-        changeHeroContent(title, desc, date, audioSrc, true);
-      } else {
-        playButtonDesktop.classList.remove('podcastPlaying');
-        changeHeroContent(title, desc, date, audioSrc, false);
-      }
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  });
-});
-
-
-
-
-
-</script>

@@ -33,10 +33,10 @@
                   $image_alt = $image_array['alt'];
                   echo '<img class="reviewPersonIMG" src="' . $image_url . '" alt="' . $image_alt . 'MUIE">';
                 } else {
-                  echo '<img class="reviewPersonIMG" src="' . get_theme_file_uri('/images/reviewPerson.png') . '" alt="">';
+                  echo '<img class="reviewPersonIMG" src="' . get_theme_file_uri('/images/reviewPerson.png') . '" alt="Generic Person Image">';
                 }                    
                 ?>
-        <img class="reviewIMG" src="<?php echo get_theme_file_uri("/images/reviewCircle.svg") ?>" alt="">
+        <img class="reviewIMG" src="<?php echo get_theme_file_uri("/images/reviewCircle.svg") ?>" alt="Generic Circle">
         <h4 class="reviewCardName"><?php echo get_field('review_name') ?></h4>
         <p class="reviewCardPosition"><?php echo get_field('review_position') ?></p>
         <p class="reviewCardReview">“<?php echo get_field('review_content') ?>”</p>

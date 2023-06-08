@@ -2,21 +2,21 @@
   <div class="footerWrapper">
 
     <div class="socialsWrapper">
-      <a class="socialsA" href="">
-        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/instagram.svg') ?>" alt="">
+      <a class="socialsA" href="https://www.instagram.com/kickstartaalborg/" target="_blank">
+        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/instagram.svg') ?>" alt="Instagram">
       </a>
-      <a class="socialsA" href="">
-        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/facebook.svg') ?>" alt="">
+      <a class="socialsA" href="https://www.facebook.com/KickstartAalborg" target="_blank">
+        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/facebook.svg') ?>" alt="Facebook">
       </a>
-      <a class="socialsA" href="">
-        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/linkedin.svg') ?>" alt="">
+      <a class="socialsA" href="https://www.linkedin.com/company/kickstartaalborg/" target="_blank">
+        <img class="socialsIMG" src="<?php echo get_theme_file_uri('/images/linkedin.svg') ?>" alt="Linkedin">
       </a>
     </div>
 
 
     <div class="footerDesktopWrapper">
 
-      <a class="footerLogo " href="">
+      <a class="footerLogo " href="<?php echo site_url()?>">
         <img class="mobileLogo" src="<?php echo get_theme_file_uri('/images/mobileLogo.svg') ?>" alt="LOGO">
       </a>
       

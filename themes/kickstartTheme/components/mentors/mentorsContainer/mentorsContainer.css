@@ -52,6 +52,13 @@
 	color: #001438;
 }
 
+.mentorCardImageEvent{
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
 
 
 @media (max-width: 375px) {

@@ -106,7 +106,7 @@
 		transition: 300ms;
 	}
 
-	.podcastCardPlayDesktop:hover{
+	.podcastCardPlayDesktop:hover {
 		scale: 1.05;
 	}
 
@@ -123,6 +123,10 @@
 
 	.podcastCardIMG {
 		display: block;
+		width: 195px;
+		height: 195px;
+		object-fit: cover;
+		border-radius: 24px;
 	}
 
 	.podcastCard {

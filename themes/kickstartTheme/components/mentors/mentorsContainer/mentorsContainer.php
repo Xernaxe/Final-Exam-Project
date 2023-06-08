@@ -33,7 +33,7 @@
                       $image_alt = $image_array['alt'];
                       echo '<img class="mentorsCardIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                   } else {
-                      echo '<img class="mentorsCardIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="">';
+                      echo '<img class="mentorsCardIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="Generic Blog Image">';
                   }                    
                 ?>
                 </div>
@@ -44,7 +44,7 @@
                   <p class="mentorsCardTitle" style="color: #001438;"><?php echo get_field('mentors_position')?></p>
 
                   <div class="mentorsCardSocials">
-                    <a class="mentorsCardA" href="<?php echo get_field('mentors_linkedInLink')?>"><?php echo get_field('mentors_name')?><img style="width:24px" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt=""></a>
+                    <a class="mentorsCardA" target="_blank" href="<?php echo get_field('mentors_linkedInLink')?>"><?php echo get_field('mentors_name')?><img style="width:24px" src="<?php echo get_theme_file_uri('/images/linkedin_B.svg') ?>" alt="LinkedIn"></a>
                   </div>
                 </div>
               

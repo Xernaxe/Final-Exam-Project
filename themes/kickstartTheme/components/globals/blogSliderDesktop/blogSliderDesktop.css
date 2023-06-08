@@ -97,6 +97,7 @@
     font-size: 1.5rem;
     color: #ff7003;
     margin: auto 0 0 auto;
+	cursor: pointer;
 }
 
 .blogSliderDesktopButton:hover{

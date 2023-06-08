@@ -16,8 +16,17 @@
               <div class="podcastCard ">
                 
                 <div class="podcastCardIMGWrapper">
-                  <img src="<?php echo get_theme_file_uri('images/podcastImg.png') ?>" alt="" class="podcastCardIMG">
-                  <img src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="" class="podcastCardPlayDesktop">
+                  <?php
+                $image_array = get_field('podcast_image');
+                if ($image_array) {
+                    $image_url = $image_array['url'];
+                    $image_alt = $image_array['alt'];
+                    echo '<img class="podcastCardIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
+                } else {
+                    echo '<img class="podcastCardIMG" src="' . get_theme_file_uri('images/podcastImg.png') . '" alt="Image">';
+                }                    
+            ?>
+                  <img src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="Play" class="podcastCardPlayDesktop">
                 </div>
                 <div class="podcastCardWrapper">
 
@@ -31,18 +40,18 @@
 
                       <div class="podcastCardTime">
                         <img class="podcastCardTimeIcon" src="<?php echo get_theme_file_uri('images/timeIcon_O.svg') ?>" alt="Length">
-                        <p class="podcastCardTimeP">22.13 min.</p>
+                        <p class="podcastCardTimeP"><?php echo get_field('podcast_duration') ?></p>
                       </div>
                       <div class="podcastCardTime">
                         <img class="podcastCardTimeIcon" src="<?php echo get_theme_file_uri('images/dateIcon_O.svg') ?>" alt="Length">
-                        <p class="podcastCardTimeP podcastCardDate">05/09/2021</p>
+                        <p class="podcastCardTimeP podcastCardDate"><?php echo get_field('podcast_date') ?></p>
                       </div>
                     </div>
                     <audio class="podcastCardAudio" src="<?php echo get_field('podcast_audio')?>"></audio>
                     <img class="podcastCardPlay" src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="Play">
                   </div>
 
-                  <a class="podcastCardSpotifyBtn">
+                  <a class="podcastCardSpotifyBtn" target="_blank" href="<?php echo get_field('podcast_link')?>">
                     Listen to on Spotify
                   </a>
 

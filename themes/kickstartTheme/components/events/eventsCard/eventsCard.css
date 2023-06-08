@@ -1,127 +1,128 @@
-.eventsCard{
-  border: 1px solid #FF7003;
-  border-radius: 40px 40px 40px 0;
-  padding: 30px 13px 21px 13px;
+.eventsCard {
+	border: 1px solid #ff7003;
+	border-radius: 40px 40px 40px 0;
+	padding: 30px 13px 21px 13px;
 }
 
-.eventsContainer{
-  margin: 1vw 6vw;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.eventsContainer {
+	margin: 1vw 6vw;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
-.eventsCardName{
-  font-size: clamp(1.5rem, 5.5vw, 2rem);
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #FF7003;
+.eventsCardName {
+	font-size: clamp(1.5rem, 5.5vw, 2rem);
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #ff7003;
 }
 
-.eventsCardDesc{
-  font-family: "Mukta";
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
-  margin: 14px 0;
+.eventsCardDesc {
+	font-family: 'Mukta';
+	font-size: clamp(0.9rem, 3vw, 1.1rem);
+	margin: 14px 0;
 }
 
-.eventsDetails{
-  display: flex;
-  gap: 5px;
+.eventsDetails {
+	display: flex;
+	gap: 5px;
 }
 
-.eventsCardDetailsP{
-  font-family: "Mukta";
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+.eventsCardDetailsP {
+	font-family: 'Mukta';
+	font-size: clamp(0.9rem, 3vw, 1.1rem);
 }
 
-.eventsButtons{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 14px;
-  gap: 5%;
+.eventsButtons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 14px;
+	gap: 5%;
 }
 
-.eventsDetailsIMG{
-  width: clamp(1.1rem, 4vw, 1.2rem);
+.eventsDetailsIMG {
+	width: clamp(1.1rem, 4vw, 1.2rem);
 }
 
-.eventsButtons > a{
-  border-radius: 24px 24px 24px 0;
-  font-size: 1.3rem;
-  font-family: "Mukta";
-  padding: 5px 10px;
-  background-color: #FF7003;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+.eventsButtons > a {
+	border-radius: 24px 24px 24px 0;
+	font-size: 1.3rem;
+	font-family: 'Mukta';
+	padding: 5px 10px;
+	background-color: #ff7003;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
 }
 
-.eventsButtons > a:nth-child(2){
-  background-color: aliceblue;
-  color: #FF7003;
+.eventsButtons > a:nth-child(2) {
+	background-color: aliceblue;
+	color: #ff7003;
 }
 
-.eventsIMG{
-  display: none;
+.eventsIMG {
+	display: none;
 }
 
-@media (max-width: 425px){
-  .eventsButtons{
-    flex-direction: column;
-    gap: 10px;
-  }
+@media (max-width: 425px) {
+	.eventsButtons {
+		flex-direction: column;
+		gap: 10px;
+	}
 
-  .eventsButtons > a{
-    width: 100%;
-  }
-
+	.eventsButtons > a {
+		width: 100%;
+	}
 }
 
 @media (min-width: 1024px) {
-  .eventsIMG{
-    display: inline;
-    min-width: 300px;
-    min-height: 300px;
-  }
+	.eventsIMG {
+		display: inline;
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+    border-radius: 24px;
+	}
 
-  .eventsCard{
-    display: flex;
-    gap: 5%;
-    padding: 30px;
-    border-width: 4px;
-  }
-  .eventsDetailsWrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+	.eventsCard {
+		display: flex;
+		gap: 5%;
+		padding: 30px;
+		border-width: 4px;
+	}
+	.eventsDetailsWrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
 
-  .eventsDetails{
-    order: 2;
-  }
+	.eventsDetails {
+		order: 2;
+	}
 
-  .eventsCardName{
-    order: 1;
-  }
+	.eventsCardName {
+		order: 1;
+	}
 
-  .eventsCardDesc{
-    font-size: 1rem;
-    order: 3;
-  }
+	.eventsCardDesc {
+		font-size: 1rem;
+		order: 3;
+	}
 
-  .eventsButtons{
-    order: 4;
-  }
+	.eventsButtons {
+		order: 4;
+	}
 
-  .eventsButtons > a{
-    width: 40%;
-    max-width: 200px;
-  }
+	.eventsButtons > a {
+		width: 40%;
+		max-width: 200px;
+	}
 
-  .eventsContainer{
-    margin: 0 11vw;
-  }
+	.eventsContainer {
+		margin: 0 11vw;
+	}
 }

@@ -10,8 +10,8 @@ get_template_part('components/globals/hero/hero');
 while (have_posts()) {
     the_post();
     ?>
-    <article>
-        <div class="postContent">
+    <article class="blogArticle" data-date="<?php echo get_field('post_date') ?>" data-author="<?php echo get_field('post_author') ?>">
+        <div class="">
             <?php the_content(); ?>
             <p class="blogP blogP1"><?php echo get_field('post_content'); ?></p>
 
