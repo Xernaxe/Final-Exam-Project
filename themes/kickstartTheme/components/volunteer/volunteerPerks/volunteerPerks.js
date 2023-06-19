@@ -1,3 +1,5 @@
 const perksCardsWrapper = document.querySelector('.perksCardsWrapper');
 
-perksCardsWrapper.scrollLeft = (perksCardsWrapper.scrollWidth - perksCardsWrapper.offsetWidth) / 2;
+if(perksCardsWrapper){
+    perksCardsWrapper.scrollLeft = (perksCardsWrapper.scrollWidth - perksCardsWrapper.offsetWidth) / 2;
+}

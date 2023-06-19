@@ -61,7 +61,11 @@ while (have_posts()) {
     <?php  get_template_part('components/globals/blogSliderDesktop/blogSliderDesktop');?>
 
 </section>
-<?php get_template_part('components/globals/backToTopButton/backToTopButton'); ?>
+<?php get_template_part('components/globals/backToTopButton/backToTopButton'); 
+get_template_part('/components/globals/newsletterDesktop/newsletterDesktop');
+get_template_part('/components/globals/newsletterPopup/newsletterPopup');
+?>
+
 </main>
 <?php
 get_footer();

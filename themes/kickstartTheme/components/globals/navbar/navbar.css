@@ -37,6 +37,11 @@
 	color: #ff7003!important;
 }
 
+.burgerMenuWrapper{
+	display: flex;
+    align-items: center;
+}
+
 @media (min-width: 1024px) {
 	.navMobile {
 		display: none;

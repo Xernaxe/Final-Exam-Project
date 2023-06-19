@@ -1,0 +1,130 @@
+.signupPopup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	width: 85%;
+	background-color: #ffddc2;
+	border-radius: 56px 56px 56px 0;
+	border: 2px solid #ff7003;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    padding: 15px;
+}
+
+.signupH {
+	color: #ff7003;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+.signupSubH,
+.signupDepartmentName {
+	color: #001438;
+	text-transform: uppercase;
+}
+
+.signupSubH {
+	font-weight: 400;
+}
+
+.signupDepartmentWrapper {
+	display: flex;
+	gap: 10px;
+}
+
+.signupDepartment {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#termsCheckbox {
+	width: 30px;
+}
+.signupForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupEmailWrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 6vw;
+    width: calc(100% - 12vw);
+}
+
+.signupButton{
+    border: 2px solid #FF7003;
+    text-transform: uppercase;
+    background-color: #FF7003;
+    font-size: 1.5rem;
+    font-family: "Mukta";
+    border-radius: 14px 14px 14px 0;
+    padding: 0 20px;
+}
+
+.signupClose{
+    width: 24px;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.signupImgWrapper{
+    width: 95%;
+}
+
+.signupDepartmentsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.signupIMG{
+    width: 50%;
+    margin-top: 10px;
+    display: none;
+}
+
+.modalOverlaySignup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.726);
+    z-index: 99;
+}
+
+.signupEmailInput{
+    width: 100%;
+    border: 4px solid #FF7003;
+    padding: 10px 10px;
+    border-radius: 16px 16px 16px 0;
+    color: #001438;
+}
+
+@media (min-width: 1024px) {
+    .signupFormWrapper{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .signupDepartmentsWrapper{
+        width: 50%;
+    }
+
+    .signupPopup{
+        width: 60%;
+    }
+
+    .signupIMG{
+        display: block;
+    }
+}

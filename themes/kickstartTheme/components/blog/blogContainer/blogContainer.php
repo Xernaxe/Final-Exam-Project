@@ -19,7 +19,7 @@
                     $image_alt = $image_array['alt'];
                     echo '<img class="blogCardIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="blogCardIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="Generic Blog Image">';
+                    echo '<img class="blogCardIMG" src="' . get_theme_file_uri('/images/blogBG.avif') . '" alt="Generic Blog Image">';
                 }                    
             ?>
 
@@ -29,7 +29,7 @@
                 <p class="blogCardDetails"><?php echo get_field('post_author'); ?></p>
                 <p class="blogCardDetails"><?php echo get_field('post_date'); ?></p>
                 <p class="blogCardDescription"><?php echo wp_trim_words(get_field('post_content'), 20); ?></p>
-                
+                <button class="blogSliderDesktopButton blogPostsButton">Read More <img src="<?php echo get_theme_file_uri('/images/rightArrow_O.svg') ?>" alt="Read more"></button>
             </div>
             </a>
             <?php

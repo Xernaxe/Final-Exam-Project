@@ -7,5 +7,4 @@ if (in_category('blog')) {
     include 'category-event.php';
     return;
 }
-
 ?>

@@ -28,7 +28,7 @@ $posts = get_posts(array(
                 $image_alt = $image_array['alt'];
                 echo '<img class="blogSliderDesktopCardIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
             } else {
-                echo '<img class="blogSliderDesktopCardIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="">';
+                echo '<img class="blogSliderDesktopCardIMG" src="' . get_theme_file_uri('/images/blogBG.avif') . '" alt="">';
             }                    
         ?>
         <div class="blogSliderDesktopCardOverlay"></div>

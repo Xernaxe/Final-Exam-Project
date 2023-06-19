@@ -9,6 +9,10 @@ function theme_files() {
   wp_enqueue_style('custom-google-fonts2', '//fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
   wp_enqueue_style('styles', get_theme_file_uri('/style.css'));
   
+  wp_enqueue_style('kickstart_newsletterPopup_styles', get_theme_file_uri('/components/globals/newsletterPopup/newsletterPopup.css'));
+  wp_enqueue_style('kickstart_newsletterDesktop_styles', get_theme_file_uri('/components/globals/newsletterDesktop/newsletterDesktop.css'));
+  wp_enqueue_style('kickstart_volunteerSignup_styles', get_theme_file_uri('/components/globals/volunteerSignup/volunteerSignup.css'));
+  wp_enqueue_script('newsletterjs', get_template_directory_uri() . '/components/globals/newsletter/newsletter.js', array(), '1.0', true);
   wp_enqueue_style('kickstart_navbar_styles', get_theme_file_uri('/components/globals/navbar/navbar.css'));
   wp_enqueue_script('navbarjs', get_template_directory_uri() . '/components/globals/navbar/navbar.js', array(), '1.0', true);
   
@@ -70,11 +74,15 @@ function theme_files() {
   if(is_page('Podcast')){
     wp_enqueue_script('heroPodcastJs', get_template_directory_uri() . '/components/globals/hero/heroPodcast.js', array(), '1.0', true);
   }
-
+  
+  if(is_page('Volunteer')){
+    wp_enqueue_script('volunteerSignup', get_template_directory_uri() . '/components/globals/volunteerSignup/volunteerSignup.js', array(), '1.0', true);
+  }
   wp_enqueue_style('kickstart_innerEvent_styles', get_theme_file_uri('/css/innerEvent.css'));
   wp_enqueue_style('kickstart_innerBlog_styles', get_theme_file_uri('/css/innerBlog.css'));
-
+  
 }
+
 
 add_action('wp_enqueue_scripts', 'theme_files');
 

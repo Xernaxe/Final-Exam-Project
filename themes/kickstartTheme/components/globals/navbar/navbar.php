@@ -2,10 +2,13 @@
 	<a class="navMobileLogo " href="<?php echo site_url('') ?>">
 		<img class="mobileLogo" src="<?php echo get_theme_file_uri('/images/mobileLogo.svg') ?>" alt="LOGO">
 	</a>
-	<div class="burgerMenu">
-		<div class="burgerLine"></div>
-		<div class="burgerLine"></div>
-		<div class="burgerLine"></div>
+	<div class="burgerMenuWrapper">
+		<?php get_template_part('/components/globals/newsletter/newsletter') ?>
+		<div class="burgerMenu">
+			<div class="burgerLine"></div>
+			<div class="burgerLine"></div>
+			<div class="burgerLine"></div>
+		</div>
 	</div>
 	<div class="navMobileWrapper hide">
 		<ul class="navMobileUL">

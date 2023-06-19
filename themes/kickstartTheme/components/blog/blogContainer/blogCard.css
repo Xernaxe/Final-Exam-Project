@@ -20,6 +20,13 @@
 	position: relative;
 	z-index: 2;
 	padding: 28px 33px;
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+}
+
+.blogPostsButton{
+	width: 168px!important;
 }
 
 .blogCardOverlay {

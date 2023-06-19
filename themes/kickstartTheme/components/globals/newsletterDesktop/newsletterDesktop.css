@@ -1,0 +1,24 @@
+.newsletterDesktop{
+    position: fixed;
+    top: 30%;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background-color: #FF7003;
+    color: #001438;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    display: none;
+}
+
+.newsletterDesktopH{
+    color: inherit;
+}
+
+@media (min-width: 1024px) {
+    .newsletterDesktop{
+        display: flex;
+    }
+}

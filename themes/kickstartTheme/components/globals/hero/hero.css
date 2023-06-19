@@ -106,42 +106,65 @@
 	margin: 40px 0 20px 0;
 }
 
+.volunteerHeroButton {
+	bottom: 10%;
+	position: absolute;
+	margin: 0 6vw;
+	background: #ff7003;
+	z-index: 1;
+	border: none;
+	border-radius: 32px 32px 32px 0;
+	font-size: clamp(1rem, 6vw, 2rem);
+	text-transform: uppercase;
+	padding: 0 20px;
+	font-family: 'Mukta';
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
 @media (min-width: 1024px) {
 	.heroPodcastWrapper {
 		margin: 3vw 11vw;
 		top: clamp(1%, 2vw, 15%);
 	}
-
+	
 	.eventDate,
 	.eventLocation {
 		font-size: 1.2rem;
 	}
-
+	
 	.eventHeroDetails {
 		padding: 0 11vw;
 	}
-
+	
 	.heroWrapper,
 	.hero,
 	.heroIMG {
 		height: clamp(399px, 39vw, 516px);
 	}
-
+	
 	.heroH {
 		padding: 0 11vw;
 		font-size: clamp(3rem, 4.5vw, 4rem);
 		bottom: clamp(30%, 30vw, 40%);
 	}
-
+	
 	.heroIMGMobile {
 		display: none;
 	}
-
+	
 	.heroIMGDesktop {
 		display: block;
 	}
-
+	
 	.heroAudio {
 		margin: 10px 0 20px 0;
+	}
+	
+	.volunteerHeroButton {
+		bottom: 25%;
+		margin: 0 11vw;
+		font-size: clamp(1.5rem, 2.5vw, 2rem);
 	}
 }

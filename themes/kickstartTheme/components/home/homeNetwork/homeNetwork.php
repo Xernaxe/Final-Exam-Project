@@ -20,7 +20,7 @@
       ?>
         
         <div class="eventsCard">
-          <img src="<?php echo get_theme_file_uri('/images/eventImg.png') ?>" alt="Generic Event Img" class="eventsIMG">
+          <img src="<?php echo get_theme_file_uri('/images/eventImg.avif') ?>" alt="Generic Event Img" class="eventsIMG">
           
           <div class="eventsDetailsWrapper">
 

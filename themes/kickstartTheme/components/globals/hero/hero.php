@@ -38,8 +38,8 @@ switch ($pageHeader) {
   <div class="heroWrapper">
 
     <div class="heroOverlay"></div>
-    <img class="heroIMGMobile" src="<?php echo get_theme_file_uri('/images/heroIMG.png') ?>" alt="Hero Img">
-    <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroIMG.png') ?>" alt="Hero Img">
+    <img class="heroIMGMobile" src="<?php echo get_theme_file_uri('/images/heroIMG.avif') ?>" alt="Hero Img">
+    <img class="heroIMGDesktop" src="<?php echo get_theme_file_uri('/images/heroIMG.avif') ?>" alt="Hero Img">
 
     <?php
     if (get_the_title() == "Podcast") {
@@ -69,6 +69,13 @@ switch ($pageHeader) {
         <p class="eventDate">17th of May</p>
         <p class="eventLocation">Aalborg University</p>
       </div>
+      <?php
+    } elseif (get_the_title() == "Volunteer") {
+      ?>
+        <div class="volunteerHeroWrapper">
+          <h1 class="heroH"><?php echo $pageHeader ?></h1>
+          <button class="volunteerHeroButton">Become a volunteer <img src="<?php echo get_theme_file_uri('images/buttonArrow_W.svg') ?>" alt="Next"></button>
+        </div>
       <?php
     } else {
       ?>

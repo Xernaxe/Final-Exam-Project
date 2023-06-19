@@ -18,6 +18,9 @@ get_header();
   get_template_part('components/home/homePodcast/homePodcast');
   get_template_part('components/home/homeBlogSlider/homeBlogSlider');
   // get_template_part('components/globals/blogSliderDesktop/blogSliderDesktop');
+  get_template_part('/components/globals/newsletterDesktop/newsletterDesktop');
+  get_template_part('/components/globals/newsletterPopup/newsletterPopup');
+
   get_template_part('components/globals/backToTopButton/backToTopButton');
   
 

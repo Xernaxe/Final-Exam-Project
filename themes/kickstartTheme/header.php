@@ -9,7 +9,7 @@
     <meta name="description" content="This is my Home Page">
     <?php
   } elseif (is_page('Blog')){?>
-  <meta name="description" content="This is my blog Page">
+  <meta name="description" content="This is my Blog Page">
   <?php
   }elseif (is_page('Events')){?>
   <meta name="description" content="This is my Events Page">

@@ -23,7 +23,7 @@
                     $image_alt = $image_array['alt'];
                     echo '<img class="podcastCardIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="podcastCardIMG" src="' . get_theme_file_uri('images/podcastImg.png') . '" alt="Image">';
+                    echo '<img class="podcastCardIMG" src="' . get_theme_file_uri('images/podcastImg.avif') . '" alt="Image">';
                 }                    
             ?>
                   <img src="<?php echo get_theme_file_uri('images/playIcon_O.svg') ?>" alt="Play" class="podcastCardPlayDesktop">

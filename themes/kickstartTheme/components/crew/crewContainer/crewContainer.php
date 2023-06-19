@@ -27,7 +27,7 @@
                                 $image_alt = $image_array['alt'];
                                 echo '<img class="crewInfoIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                             } else {
-                                echo '<img class="crewInfoIMG" src="' . get_theme_file_uri('/images/blogBG.png') . '" alt="Generic Blog Image">';
+                                echo '<img class="crewInfoIMG" src="' . get_theme_file_uri('/images/blogBG.avif') . '" alt="Generic Blog Image">';
                             }                    
                         ?>
                         </div>

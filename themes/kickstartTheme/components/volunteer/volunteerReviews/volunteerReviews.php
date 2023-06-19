@@ -33,7 +33,7 @@
                   $image_alt = $image_array['alt'];
                   echo '<img class="reviewPersonIMG" src="' . $image_url . '" alt="' . $image_alt . 'MUIE">';
                 } else {
-                  echo '<img class="reviewPersonIMG" src="' . get_theme_file_uri('/images/reviewPerson.png') . '" alt="Generic Person Image">';
+                  echo '<img class="reviewPersonIMG" src="' . get_theme_file_uri('/images/reviewPerson.avif') . '" alt="Generic Person Image">';
                 }                    
                 ?>
         <img class="reviewIMG" src="<?php echo get_theme_file_uri("/images/reviewCircle.svg") ?>" alt="Generic Circle">

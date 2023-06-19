@@ -21,7 +21,7 @@
                     $image_alt = $image_array['alt'];
                     echo '<img class="eventsIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="eventsIMG" src="' . get_theme_file_uri('images/eventImg.png') . '" alt="Image">';
+                    echo '<img class="eventsIMG" src="' . get_theme_file_uri('images/eventImg.avif') . '" alt="Image">';
                 }                    
             ?>
         

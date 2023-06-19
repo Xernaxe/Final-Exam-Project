@@ -22,7 +22,6 @@
 	text-decoration: none;
 	position: relative;
 	color: #000;
-	height: clamp(300px, 30vw, 400px);
 }
 
 .blogSliderDesktopCardIMG {

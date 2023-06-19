@@ -57,7 +57,7 @@ while (have_posts()) {
                     $image_alt = $image_array['alt'];
                     echo '<img class="eventScheduleIMG" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="eventScheduleIMG" src="' . get_theme_file_uri('images/eventImg.png') . '" alt="Image">';
+                    echo '<img class="eventScheduleIMG" src="' . get_theme_file_uri('images/eventImg.avif') . '" alt="Image">';
                 }                    
             ?>
                 <?php $schedule = get_field('event_schedule');
@@ -101,7 +101,7 @@ while (have_posts()) {
                     $image_alt = $image_array['alt'];
                     echo '<img class="mentorCardImageEvent" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.png') . '" alt="Image">';
+                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.avif') . '" alt="Image">';
                 }                    
             ?>
 
@@ -128,7 +128,7 @@ while (have_posts()) {
                     $image_alt = $image_array['alt'];
                     echo '<img class="mentorCardImageEvent" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.png') . '" alt="Image">';
+                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.avif') . '" alt="Image">';
                 }                    
             ?>
 
@@ -155,7 +155,7 @@ while (have_posts()) {
                     $image_alt = $image_array['alt'];
                     echo '<img class="mentorCardImageEvent" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.png') . '" alt="Image">';
+                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.avif') . '" alt="Image">';
                 }                    
             ?>
 
@@ -182,7 +182,7 @@ while (have_posts()) {
                     $image_alt = $image_array['alt'];
                     echo '<img class="mentorCardImageEvent" src="' . $image_url . '" alt="' . $image_alt . '">';
                 } else {
-                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.png') . '" alt="Image">';
+                    echo '<img class="mentorCardImageEvent" src="' . get_theme_file_uri('images/mentorPhoto.avif') . '" alt="Image">';
                 }                    
             ?>
 
@@ -206,6 +206,8 @@ while (have_posts()) {
 <?php
 }
 get_template_part('components/globals/backToTopButton/backToTopButton');
+get_template_part('/components/globals/newsletterDesktop/newsletterDesktop');
+get_template_part('/components/globals/newsletterPopup/newsletterPopup');
 ?>
 
 </main>
